@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+  <Header>
+    <DocumentVersion>1.01</DocumentVersion>
+    <MerchantIdentifier>YOUR_MERCHANT_ID</MerchantIdentifier>
+  </Header>
+  <MessageType>Product</MessageType>
+  <Message>
+    <MessageID>1</MessageID>
+    <OperationType>Update</OperationType>
+    <Product>
+      <SKU>YOUR_CUSTOMER_SELLER_SKU</SKU>
+      <StandardProductID>
+        <Type>ASIN</Type>
+        <Value>0141350679</Value>
+      </StandardProductID>
+      <Condition>
+        <ConditionType>New</ConditionType>
+      </Condition>
+      <NumberOfItems>1</NumberOfItems>
+      <DescriptionData>
+        <Title>Diary of a Wimpy Kid - Book 8: Hard Luck</Title>
+        <Description>Howdy!!</Description>
+        <MSRP currency="USD">9.99</MSRP>
+        <IsGiftWrapAvailable>false</IsGiftWrapAvailable>
+        <IsGiftMessageAvailable>false</IsGiftMessageAvailable>
+        <RecommendedBrowseNode>1000</RecommendedBrowseNode>
+      </DescriptionData>
+      <ProductData>
+        <Books>
+          <ProductType>
+            <BooksMisc>
+              <Author>Jeff Kinney</Author>
+              <Binding>Hardcover</Binding>
+              <PublicationDate>2014-01-31T11:03:11</PublicationDate>
+            </BooksMisc>
+          </ProductType>
+        </Books>
+      </ProductData>
+    </Product>
+  </Message>
+</AmazonEnvelope>

@@ -23,7 +23,7 @@
 				</gml:Envelope>
 			</gml:boundedBy>
 			<topp:the_geom>
-				<gml:MultiSurface srsDimension="2"
+				<!--gml:MultiSurface srsDimension="2"
 					srsName="urn:ogc:def:crs:EPSG::4326">
 					<gml:surfaceMember>
 						<gml:Polygon srsDimension="2">
@@ -272,7 +272,7 @@
 							</gml:exterior>
 						</gml:Polygon>
 					</gml:surfaceMember>
-				</gml:MultiSurface>
+				</gml:MultiSurface-->
 			</topp:the_geom>
 			<topp:STATE>Tasmania</topp:STATE>
 			<topp:COUNTRY>Australia</topp:COUNTRY>

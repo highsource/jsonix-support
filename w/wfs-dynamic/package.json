@@ -1,0 +1,20 @@
+{
+	"name": "jsonix-support-wfs-dynamic",
+	"description": "Jsonix Support [WFS Dynamic]",
+	"version": "1.0.0",
+	"engines": [
+		"node >= 0.8.0"
+	],
+	"main": "index.js",
+	"dependencies": {
+		"jsonix": "2.x.x",
+		"w3c-schemas": "1.x.x",
+		"ogc-schemas": "2.x.x"
+	},
+	"devDependencies" : {
+		"nodeunit" : "0.x.x"
+	},
+	"scripts": {
+		"test": "nodeunit tests/tests.js" 
+	}
+}

@@ -1,876 +1,876 @@
 var WMS_1_3_0_Full_Module_Factory = function () {
   var WMS_1_3_0 = {
-    n: 'WMS_1_3_0',
-    dens: 'http:\/\/www.opengis.net\/wms',
-    deps: ['XLink_1_0'],
-    tis: [{
-        ln: 'Request',
-        ps: [{
-            n: 'getCapabilities',
-            en: 'GetCapabilities',
-            ti: '.OperationType'
+    name: 'WMS_1_3_0',
+    defaultElementNamespaceURI: 'http:\/\/www.opengis.net\/wms',
+    dependencies: ['XLink_1_0'],
+    typeInfos: [{
+        localName: 'ContactAddress',
+        propertyInfos: [{
+            name: 'addressType',
+            elementName: 'AddressType'
           }, {
-            n: 'getMap',
-            en: 'GetMap',
-            ti: '.OperationType'
+            name: 'address',
+            elementName: 'Address'
           }, {
-            n: 'getFeatureInfo',
-            en: 'GetFeatureInfo',
-            ti: '.OperationType'
+            name: 'city',
+            elementName: 'City'
           }, {
-            n: 'extendedOperation',
-            col: true,
-            en: '_ExtendedOperation',
-            ti: '.OperationType'
+            name: 'stateOrProvince',
+            elementName: 'StateOrProvince'
+          }, {
+            name: 'postCode',
+            elementName: 'PostCode'
+          }, {
+            name: 'country',
+            elementName: 'Country'
           }]
       }, {
-        ln: 'Attribution',
-        ps: [{
-            n: 'title',
-            en: 'Title'
+        localName: 'WMSCapabilities',
+        propertyInfos: [{
+            name: 'service',
+            elementName: 'Service',
+            typeInfo: '.Service'
           }, {
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
+            name: 'capability',
+            elementName: 'Capability',
+            typeInfo: '.Capability'
           }, {
-            n: 'logoURL',
-            en: 'LogoURL',
-            ti: '.LogoURL'
+            name: 'version',
+            attributeName: {
+              localPart: 'version'
+            },
+            type: 'attribute'
+          }, {
+            name: 'updateSequence',
+            attributeName: {
+              localPart: 'updateSequence'
+            },
+            type: 'attribute'
           }]
       }, {
-        ln: 'WMSCapabilities',
-        ps: [{
-            n: 'service',
-            en: 'Service',
-            ti: '.Service'
+        localName: 'Request',
+        propertyInfos: [{
+            name: 'getCapabilities',
+            elementName: 'GetCapabilities',
+            typeInfo: '.OperationType'
           }, {
-            n: 'capability',
-            en: 'Capability',
-            ti: '.Capability'
+            name: 'getMap',
+            elementName: 'GetMap',
+            typeInfo: '.OperationType'
           }, {
-            n: 'version',
-            an: {
-              lp: 'version'
-            },
-            t: 'a'
+            name: 'getFeatureInfo',
+            elementName: 'GetFeatureInfo',
+            typeInfo: '.OperationType'
           }, {
-            n: 'updateSequence',
-            an: {
-              lp: 'updateSequence'
-            },
-            t: 'a'
+            name: 'extendedOperation',
+            collection: true,
+            elementName: '_ExtendedOperation',
+            typeInfo: '.OperationType'
           }]
       }, {
-        ln: 'Exception',
-        ps: [{
-            n: 'format',
-            col: true,
-            en: 'Format'
+        localName: 'Dimension',
+        propertyInfos: [{
+            name: 'value',
+            type: 'value'
+          }, {
+            name: 'name',
+            attributeName: {
+              localPart: 'name'
+            },
+            type: 'attribute'
+          }, {
+            name: 'units',
+            attributeName: {
+              localPart: 'units'
+            },
+            type: 'attribute'
+          }, {
+            name: 'unitSymbol',
+            attributeName: {
+              localPart: 'unitSymbol'
+            },
+            type: 'attribute'
+          }, {
+            name: '_default',
+            attributeName: {
+              localPart: 'default'
+            },
+            type: 'attribute'
+          }, {
+            name: 'multipleValues',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'multipleValues'
+            },
+            type: 'attribute'
+          }, {
+            name: 'nearestValue',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'nearestValue'
+            },
+            type: 'attribute'
+          }, {
+            name: 'current',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'current'
+            },
+            type: 'attribute'
           }]
       }, {
-        ln: 'ContactInformation',
-        ps: [{
-            n: 'contactPersonPrimary',
-            en: 'ContactPersonPrimary',
-            ti: '.ContactPersonPrimary'
-          }, {
-            n: 'contactPosition',
-            en: 'ContactPosition'
-          }, {
-            n: 'contactAddress',
-            en: 'ContactAddress',
-            ti: '.ContactAddress'
-          }, {
-            n: 'contactVoiceTelephone',
-            en: 'ContactVoiceTelephone'
-          }, {
-            n: 'contactFacsimileTelephone',
-            en: 'ContactFacsimileTelephone'
-          }, {
-            n: 'contactElectronicMailAddress',
-            en: 'ContactElectronicMailAddress'
+        localName: 'KeywordList',
+        propertyInfos: [{
+            name: 'keyword',
+            collection: true,
+            elementName: 'Keyword',
+            typeInfo: '.Keyword'
           }]
       }, {
-        ln: 'OnlineResource',
-        ps: [{
-            n: 'type',
-            an: {
-              lp: 'type',
-              ns: 'http:\/\/www.w3.org\/1999\/xlink'
+        localName: 'OnlineResource',
+        propertyInfos: [{
+            name: 'type',
+            attributeName: {
+              localPart: 'type',
+              namespaceURI: 'http:\/\/www.w3.org\/1999\/xlink'
             },
-            t: 'a'
+            type: 'attribute'
           }, {
-            n: 'href',
-            an: {
-              lp: 'href',
-              ns: 'http:\/\/www.w3.org\/1999\/xlink'
+            name: 'href',
+            attributeName: {
+              localPart: 'href',
+              namespaceURI: 'http:\/\/www.w3.org\/1999\/xlink'
             },
-            t: 'a'
+            type: 'attribute'
           }, {
-            n: 'role',
-            an: {
-              lp: 'role',
-              ns: 'http:\/\/www.w3.org\/1999\/xlink'
+            name: 'role',
+            attributeName: {
+              localPart: 'role',
+              namespaceURI: 'http:\/\/www.w3.org\/1999\/xlink'
             },
-            t: 'a'
+            type: 'attribute'
           }, {
-            n: 'arcrole',
-            an: {
-              lp: 'arcrole',
-              ns: 'http:\/\/www.w3.org\/1999\/xlink'
+            name: 'arcrole',
+            attributeName: {
+              localPart: 'arcrole',
+              namespaceURI: 'http:\/\/www.w3.org\/1999\/xlink'
             },
-            t: 'a'
+            type: 'attribute'
           }, {
-            n: 'title',
-            an: {
-              lp: 'title',
-              ns: 'http:\/\/www.w3.org\/1999\/xlink'
+            name: 'title',
+            attributeName: {
+              localPart: 'title',
+              namespaceURI: 'http:\/\/www.w3.org\/1999\/xlink'
             },
-            t: 'a'
+            type: 'attribute'
           }, {
-            n: 'show',
-            an: {
-              lp: 'show',
-              ns: 'http:\/\/www.w3.org\/1999\/xlink'
+            name: 'show',
+            attributeName: {
+              localPart: 'show',
+              namespaceURI: 'http:\/\/www.w3.org\/1999\/xlink'
             },
-            t: 'a'
+            type: 'attribute'
           }, {
-            n: 'actuate',
-            an: {
-              lp: 'actuate',
-              ns: 'http:\/\/www.w3.org\/1999\/xlink'
+            name: 'actuate',
+            attributeName: {
+              localPart: 'actuate',
+              namespaceURI: 'http:\/\/www.w3.org\/1999\/xlink'
             },
-            t: 'a'
+            type: 'attribute'
           }]
       }, {
-        ln: 'OperationType',
-        ps: [{
-            n: 'format',
-            col: true,
-            en: 'Format'
-          }, {
-            n: 'dcpType',
-            col: true,
-            en: 'DCPType',
-            ti: '.DCPType'
+        localName: 'Post',
+        propertyInfos: [{
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
           }]
       }, {
-        ln: 'StyleSheetURL',
-        ps: [{
-            n: 'format',
-            en: 'Format'
+        localName: 'LogoURL',
+        propertyInfos: [{
+            name: 'format',
+            elementName: 'Format'
           }, {
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }, {
+            name: 'width',
+            typeInfo: 'Integer',
+            attributeName: {
+              localPart: 'width'
+            },
+            type: 'attribute'
+          }, {
+            name: 'height',
+            typeInfo: 'Integer',
+            attributeName: {
+              localPart: 'height'
+            },
+            type: 'attribute'
           }]
       }, {
-        ln: 'AuthorityURL',
-        ps: [{
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
+        localName: 'Capability',
+        propertyInfos: [{
+            name: 'request',
+            elementName: 'Request',
+            typeInfo: '.Request'
           }, {
-            n: 'name',
-            an: {
-              lp: 'name'
-            },
-            t: 'a'
+            name: 'exception',
+            elementName: 'Exception',
+            typeInfo: '.Exception'
+          }, {
+            name: 'extendedCapabilities',
+            collection: true,
+            elementName: '_ExtendedCapabilities',
+            typeInfo: 'AnyType'
+          }, {
+            name: 'layer',
+            elementName: 'Layer',
+            typeInfo: '.Layer'
           }]
       }, {
-        ln: 'ContactAddress',
-        ps: [{
-            n: 'addressType',
-            en: 'AddressType'
+        localName: 'ContactPersonPrimary',
+        propertyInfos: [{
+            name: 'contactPerson',
+            elementName: 'ContactPerson'
           }, {
-            n: 'address',
-            en: 'Address'
-          }, {
-            n: 'city',
-            en: 'City'
-          }, {
-            n: 'stateOrProvince',
-            en: 'StateOrProvince'
-          }, {
-            n: 'postCode',
-            en: 'PostCode'
-          }, {
-            n: 'country',
-            en: 'Country'
+            name: 'contactOrganization',
+            elementName: 'ContactOrganization'
           }]
       }, {
-        ln: 'Layer',
-        ps: [{
-            n: 'name',
-            en: 'Name'
+        localName: 'Style',
+        propertyInfos: [{
+            name: 'name',
+            elementName: 'Name'
           }, {
-            n: 'title',
-            en: 'Title'
+            name: 'title',
+            elementName: 'Title'
           }, {
-            n: '_abstract',
-            en: 'Abstract'
+            name: '_abstract',
+            elementName: 'Abstract'
           }, {
-            n: 'keywordList',
-            en: 'KeywordList',
-            ti: '.KeywordList'
+            name: 'legendURL',
+            collection: true,
+            elementName: 'LegendURL',
+            typeInfo: '.LegendURL'
           }, {
-            n: 'crs',
-            col: true,
-            en: 'CRS'
+            name: 'styleSheetURL',
+            elementName: 'StyleSheetURL',
+            typeInfo: '.StyleSheetURL'
           }, {
-            n: 'exGeographicBoundingBox',
-            en: 'EX_GeographicBoundingBox',
-            ti: '.EXGeographicBoundingBox'
-          }, {
-            n: 'boundingBox',
-            col: true,
-            en: 'BoundingBox',
-            ti: '.BoundingBox'
-          }, {
-            n: 'dimension',
-            col: true,
-            en: 'Dimension',
-            ti: '.Dimension'
-          }, {
-            n: 'attribution',
-            en: 'Attribution',
-            ti: '.Attribution'
-          }, {
-            n: 'authorityURL',
-            col: true,
-            en: 'AuthorityURL',
-            ti: '.AuthorityURL'
-          }, {
-            n: 'identifier',
-            col: true,
-            en: 'Identifier',
-            ti: '.Identifier'
-          }, {
-            n: 'metadataURL',
-            col: true,
-            en: 'MetadataURL',
-            ti: '.MetadataURL'
-          }, {
-            n: 'dataURL',
-            col: true,
-            en: 'DataURL',
-            ti: '.DataURL'
-          }, {
-            n: 'featureListURL',
-            col: true,
-            en: 'FeatureListURL',
-            ti: '.FeatureListURL'
-          }, {
-            n: 'style',
-            col: true,
-            en: 'Style',
-            ti: '.Style'
-          }, {
-            n: 'minScaleDenominator',
-            en: 'MinScaleDenominator',
-            ti: 'Double'
-          }, {
-            n: 'maxScaleDenominator',
-            en: 'MaxScaleDenominator',
-            ti: 'Double'
-          }, {
-            n: 'layer',
-            col: true,
-            en: 'Layer',
-            ti: '.Layer'
-          }, {
-            n: 'queryable',
-            ti: 'Boolean',
-            an: {
-              lp: 'queryable'
-            },
-            t: 'a'
-          }, {
-            n: 'cascaded',
-            ti: 'Integer',
-            an: {
-              lp: 'cascaded'
-            },
-            t: 'a'
-          }, {
-            n: 'opaque',
-            ti: 'Boolean',
-            an: {
-              lp: 'opaque'
-            },
-            t: 'a'
-          }, {
-            n: 'noSubsets',
-            ti: 'Boolean',
-            an: {
-              lp: 'noSubsets'
-            },
-            t: 'a'
-          }, {
-            n: 'fixedWidth',
-            ti: 'Integer',
-            an: {
-              lp: 'fixedWidth'
-            },
-            t: 'a'
-          }, {
-            n: 'fixedHeight',
-            ti: 'Integer',
-            an: {
-              lp: 'fixedHeight'
-            },
-            t: 'a'
+            name: 'styleURL',
+            elementName: 'StyleURL',
+            typeInfo: '.StyleURL'
           }]
       }, {
-        ln: 'ContactPersonPrimary',
-        ps: [{
-            n: 'contactPerson',
-            en: 'ContactPerson'
+        localName: 'StyleURL',
+        propertyInfos: [{
+            name: 'format',
+            elementName: 'Format'
           }, {
-            n: 'contactOrganization',
-            en: 'ContactOrganization'
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
           }]
       }, {
-        ln: 'BoundingBox',
-        ps: [{
-            n: 'crs',
-            an: {
-              lp: 'CRS'
-            },
-            t: 'a'
+        localName: 'HTTP',
+        propertyInfos: [{
+            name: 'get',
+            elementName: 'Get',
+            typeInfo: '.Get'
           }, {
-            n: 'minx',
-            ti: 'Double',
-            an: {
-              lp: 'minx'
-            },
-            t: 'a'
-          }, {
-            n: 'miny',
-            ti: 'Double',
-            an: {
-              lp: 'miny'
-            },
-            t: 'a'
-          }, {
-            n: 'maxx',
-            ti: 'Double',
-            an: {
-              lp: 'maxx'
-            },
-            t: 'a'
-          }, {
-            n: 'maxy',
-            ti: 'Double',
-            an: {
-              lp: 'maxy'
-            },
-            t: 'a'
-          }, {
-            n: 'resx',
-            ti: 'Double',
-            an: {
-              lp: 'resx'
-            },
-            t: 'a'
-          }, {
-            n: 'resy',
-            ti: 'Double',
-            an: {
-              lp: 'resy'
-            },
-            t: 'a'
+            name: 'post',
+            elementName: 'Post',
+            typeInfo: '.Post'
           }]
       }, {
-        ln: 'Post',
-        ps: [{
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
-          }]
-      }, {
-        ln: 'DataURL',
-        ps: [{
-            n: 'format',
-            en: 'Format'
+        localName: 'Keyword',
+        propertyInfos: [{
+            name: 'value',
+            type: 'value'
           }, {
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
-          }]
-      }, {
-        ln: 'Dimension',
-        ps: [{
-            n: 'value',
-            t: 'v'
-          }, {
-            n: 'name',
-            an: {
-              lp: 'name'
+            name: 'vocabulary',
+            attributeName: {
+              localPart: 'vocabulary'
             },
-            t: 'a'
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'ContactInformation',
+        propertyInfos: [{
+            name: 'contactPersonPrimary',
+            elementName: 'ContactPersonPrimary',
+            typeInfo: '.ContactPersonPrimary'
           }, {
-            n: 'units',
-            an: {
-              lp: 'units'
+            name: 'contactPosition',
+            elementName: 'ContactPosition'
+          }, {
+            name: 'contactAddress',
+            elementName: 'ContactAddress',
+            typeInfo: '.ContactAddress'
+          }, {
+            name: 'contactVoiceTelephone',
+            elementName: 'ContactVoiceTelephone'
+          }, {
+            name: 'contactFacsimileTelephone',
+            elementName: 'ContactFacsimileTelephone'
+          }, {
+            name: 'contactElectronicMailAddress',
+            elementName: 'ContactElectronicMailAddress'
+          }]
+      }, {
+        localName: 'StyleSheetURL',
+        propertyInfos: [{
+            name: 'format',
+            elementName: 'Format'
+          }, {
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }]
+      }, {
+        localName: 'AuthorityURL',
+        propertyInfos: [{
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }, {
+            name: 'name',
+            attributeName: {
+              localPart: 'name'
             },
-            t: 'a'
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'Attribution',
+        propertyInfos: [{
+            name: 'title',
+            elementName: 'Title'
           }, {
-            n: 'unitSymbol',
-            an: {
-              lp: 'unitSymbol'
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }, {
+            name: 'logoURL',
+            elementName: 'LogoURL',
+            typeInfo: '.LogoURL'
+          }]
+      }, {
+        localName: 'FeatureListURL',
+        propertyInfos: [{
+            name: 'format',
+            elementName: 'Format'
+          }, {
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }]
+      }, {
+        localName: 'OperationType',
+        propertyInfos: [{
+            name: 'format',
+            collection: true,
+            elementName: 'Format'
+          }, {
+            name: 'dcpType',
+            collection: true,
+            elementName: 'DCPType',
+            typeInfo: '.DCPType'
+          }]
+      }, {
+        localName: 'Exception',
+        propertyInfos: [{
+            name: 'format',
+            collection: true,
+            elementName: 'Format'
+          }]
+      }, {
+        localName: 'Service',
+        propertyInfos: [{
+            name: 'name',
+            elementName: 'Name'
+          }, {
+            name: 'title',
+            elementName: 'Title'
+          }, {
+            name: '_abstract',
+            elementName: 'Abstract'
+          }, {
+            name: 'keywordList',
+            elementName: 'KeywordList',
+            typeInfo: '.KeywordList'
+          }, {
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }, {
+            name: 'contactInformation',
+            elementName: 'ContactInformation',
+            typeInfo: '.ContactInformation'
+          }, {
+            name: 'fees',
+            elementName: 'Fees'
+          }, {
+            name: 'accessConstraints',
+            elementName: 'AccessConstraints'
+          }, {
+            name: 'layerLimit',
+            elementName: 'LayerLimit',
+            typeInfo: 'Integer'
+          }, {
+            name: 'maxWidth',
+            elementName: 'MaxWidth',
+            typeInfo: 'Integer'
+          }, {
+            name: 'maxHeight',
+            elementName: 'MaxHeight',
+            typeInfo: 'Integer'
+          }]
+      }, {
+        localName: 'Identifier',
+        propertyInfos: [{
+            name: 'value',
+            type: 'value'
+          }, {
+            name: 'authority',
+            attributeName: {
+              localPart: 'authority'
             },
-            t: 'a'
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'Layer',
+        propertyInfos: [{
+            name: 'name',
+            elementName: 'Name'
           }, {
-            n: '_default',
-            an: {
-              lp: 'default'
+            name: 'title',
+            elementName: 'Title'
+          }, {
+            name: '_abstract',
+            elementName: 'Abstract'
+          }, {
+            name: 'keywordList',
+            elementName: 'KeywordList',
+            typeInfo: '.KeywordList'
+          }, {
+            name: 'crs',
+            collection: true,
+            elementName: 'CRS'
+          }, {
+            name: 'exGeographicBoundingBox',
+            elementName: 'EX_GeographicBoundingBox',
+            typeInfo: '.EXGeographicBoundingBox'
+          }, {
+            name: 'boundingBox',
+            collection: true,
+            elementName: 'BoundingBox',
+            typeInfo: '.BoundingBox'
+          }, {
+            name: 'dimension',
+            collection: true,
+            elementName: 'Dimension',
+            typeInfo: '.Dimension'
+          }, {
+            name: 'attribution',
+            elementName: 'Attribution',
+            typeInfo: '.Attribution'
+          }, {
+            name: 'authorityURL',
+            collection: true,
+            elementName: 'AuthorityURL',
+            typeInfo: '.AuthorityURL'
+          }, {
+            name: 'identifier',
+            collection: true,
+            elementName: 'Identifier',
+            typeInfo: '.Identifier'
+          }, {
+            name: 'metadataURL',
+            collection: true,
+            elementName: 'MetadataURL',
+            typeInfo: '.MetadataURL'
+          }, {
+            name: 'dataURL',
+            collection: true,
+            elementName: 'DataURL',
+            typeInfo: '.DataURL'
+          }, {
+            name: 'featureListURL',
+            collection: true,
+            elementName: 'FeatureListURL',
+            typeInfo: '.FeatureListURL'
+          }, {
+            name: 'style',
+            collection: true,
+            elementName: 'Style',
+            typeInfo: '.Style'
+          }, {
+            name: 'minScaleDenominator',
+            elementName: 'MinScaleDenominator',
+            typeInfo: 'Double'
+          }, {
+            name: 'maxScaleDenominator',
+            elementName: 'MaxScaleDenominator',
+            typeInfo: 'Double'
+          }, {
+            name: 'layer',
+            collection: true,
+            elementName: 'Layer',
+            typeInfo: '.Layer'
+          }, {
+            name: 'queryable',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'queryable'
             },
-            t: 'a'
+            type: 'attribute'
           }, {
-            n: 'multipleValues',
-            ti: 'Boolean',
-            an: {
-              lp: 'multipleValues'
+            name: 'cascaded',
+            typeInfo: 'Integer',
+            attributeName: {
+              localPart: 'cascaded'
             },
-            t: 'a'
+            type: 'attribute'
           }, {
-            n: 'nearestValue',
-            ti: 'Boolean',
-            an: {
-              lp: 'nearestValue'
+            name: 'opaque',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'opaque'
             },
-            t: 'a'
+            type: 'attribute'
           }, {
-            n: 'current',
-            ti: 'Boolean',
-            an: {
-              lp: 'current'
+            name: 'noSubsets',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'noSubsets'
             },
-            t: 'a'
-          }]
-      }, {
-        ln: 'LogoURL',
-        ps: [{
-            n: 'format',
-            en: 'Format'
+            type: 'attribute'
           }, {
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
-          }, {
-            n: 'width',
-            ti: 'Integer',
-            an: {
-              lp: 'width'
+            name: 'fixedWidth',
+            typeInfo: 'Integer',
+            attributeName: {
+              localPart: 'fixedWidth'
             },
-            t: 'a'
+            type: 'attribute'
           }, {
-            n: 'height',
-            ti: 'Integer',
-            an: {
-              lp: 'height'
+            name: 'fixedHeight',
+            typeInfo: 'Integer',
+            attributeName: {
+              localPart: 'fixedHeight'
             },
-            t: 'a'
+            type: 'attribute'
           }]
       }, {
-        ln: 'FeatureListURL',
-        ps: [{
-            n: 'format',
-            en: 'Format'
-          }, {
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
+        localName: 'DCPType',
+        propertyInfos: [{
+            name: 'http',
+            elementName: 'HTTP',
+            typeInfo: '.HTTP'
           }]
       }, {
-        ln: 'DCPType',
-        ps: [{
-            n: 'http',
-            en: 'HTTP',
-            ti: '.HTTP'
-          }]
-      }, {
-        ln: 'MetadataURL',
-        ps: [{
-            n: 'format',
-            en: 'Format'
-          }, {
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
-          }, {
-            n: 'type',
-            an: {
-              lp: 'type'
+        localName: 'BoundingBox',
+        propertyInfos: [{
+            name: 'crs',
+            attributeName: {
+              localPart: 'CRS'
             },
-            t: 'a'
-          }]
-      }, {
-        ln: 'LegendURL',
-        ps: [{
-            n: 'format',
-            en: 'Format'
+            type: 'attribute'
           }, {
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
-          }, {
-            n: 'width',
-            ti: 'Integer',
-            an: {
-              lp: 'width'
+            name: 'minx',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'minx'
             },
-            t: 'a'
+            type: 'attribute'
           }, {
-            n: 'height',
-            ti: 'Integer',
-            an: {
-              lp: 'height'
+            name: 'miny',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'miny'
             },
-            t: 'a'
-          }]
-      }, {
-        ln: 'Service',
-        ps: [{
-            n: 'name',
-            en: 'Name'
+            type: 'attribute'
           }, {
-            n: 'title',
-            en: 'Title'
-          }, {
-            n: '_abstract',
-            en: 'Abstract'
-          }, {
-            n: 'keywordList',
-            en: 'KeywordList',
-            ti: '.KeywordList'
-          }, {
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
-          }, {
-            n: 'contactInformation',
-            en: 'ContactInformation',
-            ti: '.ContactInformation'
-          }, {
-            n: 'fees',
-            en: 'Fees'
-          }, {
-            n: 'accessConstraints',
-            en: 'AccessConstraints'
-          }, {
-            n: 'layerLimit',
-            en: 'LayerLimit',
-            ti: 'Integer'
-          }, {
-            n: 'maxWidth',
-            en: 'MaxWidth',
-            ti: 'Integer'
-          }, {
-            n: 'maxHeight',
-            en: 'MaxHeight',
-            ti: 'Integer'
-          }]
-      }, {
-        ln: 'KeywordList',
-        ps: [{
-            n: 'keyword',
-            col: true,
-            en: 'Keyword',
-            ti: '.Keyword'
-          }]
-      }, {
-        ln: 'StyleURL',
-        ps: [{
-            n: 'format',
-            en: 'Format'
-          }, {
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
-          }]
-      }, {
-        ln: 'Keyword',
-        ps: [{
-            n: 'value',
-            t: 'v'
-          }, {
-            n: 'vocabulary',
-            an: {
-              lp: 'vocabulary'
+            name: 'maxx',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'maxx'
             },
-            t: 'a'
-          }]
-      }, {
-        ln: 'EXGeographicBoundingBox',
-        ps: [{
-            n: 'westBoundLongitude',
-            ti: 'Double'
+            type: 'attribute'
           }, {
-            n: 'eastBoundLongitude',
-            ti: 'Double'
-          }, {
-            n: 'southBoundLatitude',
-            ti: 'Double'
-          }, {
-            n: 'northBoundLatitude',
-            ti: 'Double'
-          }]
-      }, {
-        ln: 'Capability',
-        ps: [{
-            n: 'request',
-            en: 'Request',
-            ti: '.Request'
-          }, {
-            n: 'exception',
-            en: 'Exception',
-            ti: '.Exception'
-          }, {
-            n: 'extendedCapabilities',
-            col: true,
-            en: '_ExtendedCapabilities',
-            ti: 'AnyType'
-          }, {
-            n: 'layer',
-            en: 'Layer',
-            ti: '.Layer'
-          }]
-      }, {
-        ln: 'Identifier',
-        ps: [{
-            n: 'value',
-            t: 'v'
-          }, {
-            n: 'authority',
-            an: {
-              lp: 'authority'
+            name: 'maxy',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'maxy'
             },
-            t: 'a'
+            type: 'attribute'
+          }, {
+            name: 'resx',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'resx'
+            },
+            type: 'attribute'
+          }, {
+            name: 'resy',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'resy'
+            },
+            type: 'attribute'
           }]
       }, {
-        ln: 'Get',
-        ps: [{
-            n: 'onlineResource',
-            en: 'OnlineResource',
-            ti: '.OnlineResource'
+        localName: 'DataURL',
+        propertyInfos: [{
+            name: 'format',
+            elementName: 'Format'
+          }, {
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
           }]
       }, {
-        ln: 'Style',
-        ps: [{
-            n: 'name',
-            en: 'Name'
+        localName: 'MetadataURL',
+        propertyInfos: [{
+            name: 'format',
+            elementName: 'Format'
           }, {
-            n: 'title',
-            en: 'Title'
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
           }, {
-            n: '_abstract',
-            en: 'Abstract'
-          }, {
-            n: 'legendURL',
-            col: true,
-            en: 'LegendURL',
-            ti: '.LegendURL'
-          }, {
-            n: 'styleSheetURL',
-            en: 'StyleSheetURL',
-            ti: '.StyleSheetURL'
-          }, {
-            n: 'styleURL',
-            en: 'StyleURL',
-            ti: '.StyleURL'
+            name: 'type',
+            attributeName: {
+              localPart: 'type'
+            },
+            type: 'attribute'
           }]
       }, {
-        ln: 'HTTP',
-        ps: [{
-            n: 'get',
-            en: 'Get',
-            ti: '.Get'
+        localName: 'Get',
+        propertyInfos: [{
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }]
+      }, {
+        localName: 'LegendURL',
+        propertyInfos: [{
+            name: 'format',
+            elementName: 'Format'
           }, {
-            n: 'post',
-            en: 'Post',
-            ti: '.Post'
+            name: 'onlineResource',
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }, {
+            name: 'width',
+            typeInfo: 'Integer',
+            attributeName: {
+              localPart: 'width'
+            },
+            type: 'attribute'
+          }, {
+            name: 'height',
+            typeInfo: 'Integer',
+            attributeName: {
+              localPart: 'height'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'EXGeographicBoundingBox',
+        propertyInfos: [{
+            name: 'westBoundLongitude',
+            typeInfo: 'Double'
+          }, {
+            name: 'eastBoundLongitude',
+            typeInfo: 'Double'
+          }, {
+            name: 'southBoundLatitude',
+            typeInfo: 'Double'
+          }, {
+            name: 'northBoundLatitude',
+            typeInfo: 'Double'
           }]
       }],
-    eis: [{
-        en: 'WMS_Capabilities',
-        ti: '.WMSCapabilities'
+    elementInfos: [{
+        elementName: 'AccessConstraints'
       }, {
-        en: 'ContactFacsimileTelephone'
+        elementName: 'StyleURL',
+        typeInfo: '.StyleURL'
       }, {
-        en: 'MaxHeight',
-        ti: 'Integer'
+        elementName: 'AuthorityURL',
+        typeInfo: '.AuthorityURL'
       }, {
-        en: 'ContactInformation',
-        ti: '.ContactInformation'
+        elementName: 'Name'
       }, {
-        en: 'LegendURL',
-        ti: '.LegendURL'
+        elementName: 'Capability',
+        typeInfo: '.Capability'
       }, {
-        en: 'Fees'
+        elementName: 'Service',
+        typeInfo: '.Service'
       }, {
-        en: 'ContactPersonPrimary',
-        ti: '.ContactPersonPrimary'
+        elementName: 'WMS_Capabilities',
+        typeInfo: '.WMSCapabilities'
       }, {
-        en: 'GetFeatureInfo',
-        ti: '.OperationType'
+        elementName: 'GetCapabilities',
+        typeInfo: '.OperationType'
       }, {
-        en: 'FeatureListURL',
-        ti: '.FeatureListURL'
+        elementName: '_ExtendedOperation',
+        typeInfo: '.OperationType'
       }, {
-        en: 'Get',
-        ti: '.Get'
+        elementName: 'Address'
       }, {
-        en: 'BoundingBox',
-        ti: '.BoundingBox'
+        elementName: 'LegendURL',
+        typeInfo: '.LegendURL'
       }, {
-        en: 'LayerLimit',
-        ti: 'Integer'
+        elementName: 'ContactVoiceTelephone'
       }, {
-        en: 'MaxWidth',
-        ti: 'Integer'
+        elementName: 'BoundingBox',
+        typeInfo: '.BoundingBox'
       }, {
-        en: 'Style',
-        ti: '.Style'
+        elementName: 'PostCode'
       }, {
-        en: 'HTTP',
-        ti: '.HTTP'
+        elementName: 'Keyword',
+        typeInfo: '.Keyword'
       }, {
-        en: 'DCPType',
-        ti: '.DCPType'
+        elementName: 'Post',
+        typeInfo: '.Post'
       }, {
-        en: 'Dimension',
-        ti: '.Dimension'
+        elementName: 'Style',
+        typeInfo: '.Style'
       }, {
-        en: 'Keyword',
-        ti: '.Keyword'
+        elementName: 'GetMap',
+        typeInfo: '.OperationType'
       }, {
-        en: 'PostCode'
+        elementName: 'Title'
       }, {
-        en: 'Service',
-        ti: '.Service'
+        elementName: 'City'
       }, {
-        en: 'StateOrProvince'
+        elementName: 'MetadataURL',
+        typeInfo: '.MetadataURL'
       }, {
-        en: 'MetadataURL',
-        ti: '.MetadataURL'
+        elementName: 'FeatureListURL',
+        typeInfo: '.FeatureListURL'
       }, {
-        en: '_ExtendedOperation',
-        ti: '.OperationType'
+        elementName: 'Attribution',
+        typeInfo: '.Attribution'
       }, {
-        en: 'DataURL',
-        ti: '.DataURL'
+        elementName: 'ContactFacsimileTelephone'
       }, {
-        en: 'Format'
+        elementName: 'LayerLimit',
+        typeInfo: 'Integer'
       }, {
-        en: 'Attribution',
-        ti: '.Attribution'
+        elementName: 'CRS'
       }, {
-        en: 'StyleSheetURL',
-        ti: '.StyleSheetURL'
+        elementName: 'GetFeatureInfo',
+        typeInfo: '.OperationType'
       }, {
-        en: 'ContactPerson'
+        elementName: 'ContactElectronicMailAddress'
       }, {
-        en: 'ContactAddress',
-        ti: '.ContactAddress'
+        elementName: 'LogoURL',
+        typeInfo: '.LogoURL'
       }, {
-        en: 'AddressType'
+        elementName: 'Exception',
+        typeInfo: '.Exception'
       }, {
-        en: 'Abstract'
+        elementName: 'MaxWidth',
+        typeInfo: 'Integer'
       }, {
-        en: 'ContactVoiceTelephone'
+        elementName: 'Request',
+        typeInfo: '.Request'
       }, {
-        en: 'ContactPosition'
+        elementName: 'EX_GeographicBoundingBox',
+        typeInfo: '.EXGeographicBoundingBox'
       }, {
-        en: 'KeywordList',
-        ti: '.KeywordList'
+        elementName: 'DCPType',
+        typeInfo: '.DCPType'
       }, {
-        en: 'ContactElectronicMailAddress'
+        elementName: 'HTTP',
+        typeInfo: '.HTTP'
       }, {
-        en: 'LogoURL',
-        ti: '.LogoURL'
+        elementName: 'Get',
+        typeInfo: '.Get'
       }, {
-        en: 'StyleURL',
-        ti: '.StyleURL'
+        elementName: 'Abstract'
       }, {
-        en: 'OnlineResource',
-        ti: '.OnlineResource'
+        elementName: '_ExtendedCapabilities',
+        typeInfo: 'AnyType'
       }, {
-        en: 'GetMap',
-        ti: '.OperationType'
+        elementName: 'KeywordList',
+        typeInfo: '.KeywordList'
       }, {
-        en: 'Exception',
-        ti: '.Exception'
+        elementName: 'ContactAddress',
+        typeInfo: '.ContactAddress'
       }, {
-        en: 'Address'
+        elementName: 'Layer',
+        typeInfo: '.Layer'
       }, {
-        en: 'MaxScaleDenominator',
-        ti: 'Double'
+        elementName: 'ContactPerson'
       }, {
-        en: 'Title'
+        elementName: 'StateOrProvince'
       }, {
-        en: 'Identifier',
-        ti: '.Identifier'
+        elementName: 'MaxHeight',
+        typeInfo: 'Integer'
       }, {
-        en: 'GetCapabilities',
-        ti: '.OperationType'
+        elementName: 'Country'
       }, {
-        en: 'CRS'
+        elementName: 'Identifier',
+        typeInfo: '.Identifier'
       }, {
-        en: 'AuthorityURL',
-        ti: '.AuthorityURL'
+        elementName: 'MaxScaleDenominator',
+        typeInfo: 'Double'
       }, {
-        en: 'City'
+        elementName: 'MinScaleDenominator',
+        typeInfo: 'Double'
       }, {
-        en: 'AccessConstraints'
+        elementName: 'Format'
       }, {
-        en: 'ContactOrganization'
+        elementName: 'DataURL',
+        typeInfo: '.DataURL'
       }, {
-        en: 'MinScaleDenominator',
-        ti: 'Double'
+        elementName: 'Fees'
       }, {
-        en: 'Layer',
-        ti: '.Layer'
+        elementName: 'ContactPersonPrimary',
+        typeInfo: '.ContactPersonPrimary'
       }, {
-        en: 'EX_GeographicBoundingBox',
-        ti: '.EXGeographicBoundingBox'
+        elementName: 'ContactOrganization'
       }, {
-        en: 'Country'
+        elementName: 'StyleSheetURL',
+        typeInfo: '.StyleSheetURL'
       }, {
-        en: 'Capability',
-        ti: '.Capability'
+        elementName: 'AddressType'
       }, {
-        en: '_ExtendedCapabilities',
-        ti: 'AnyType'
+        elementName: 'ContactInformation',
+        typeInfo: '.ContactInformation'
       }, {
-        en: 'Post',
-        ti: '.Post'
+        elementName: 'Dimension',
+        typeInfo: '.Dimension'
       }, {
-        en: 'Name'
+        elementName: 'OnlineResource',
+        typeInfo: '.OnlineResource'
       }, {
-        en: 'Request',
-        ti: '.Request'
+        elementName: 'ContactPosition'
       }]
   };
   var XLink_1_0 = {
-    n: 'XLink_1_0',
-    dens: 'http:\/\/www.w3.org\/1999\/xlink',
-    dans: 'http:\/\/www.w3.org\/1999\/xlink',
-    tis: [{
-        t: 'enum',
-        ln: 'ShowType',
-        vs: ['new', 'replace', 'embed', 'other', 'none']
+    name: 'XLink_1_0',
+    defaultElementNamespaceURI: 'http:\/\/www.w3.org\/1999\/xlink',
+    defaultAttributeNamespaceURI: 'http:\/\/www.w3.org\/1999\/xlink',
+    typeInfos: [{
+        type: 'enumInfo',
+        localName: 'ActuateType',
+        values: ['onLoad', 'onRequest', 'other', 'none']
       }, {
-        t: 'enum',
-        ln: 'ActuateType',
-        vs: ['onLoad', 'onRequest', 'other', 'none']
+        type: 'enumInfo',
+        localName: 'ShowType',
+        values: ['new', 'replace', 'embed', 'other', 'none']
       }, {
-        t: 'enum',
-        ln: 'TypeType',
-        vs: ['simple', 'extended', 'title', 'resource', 'locator', 'arc']
+        type: 'enumInfo',
+        localName: 'TypeType',
+        values: ['simple', 'extended', 'title', 'resource', 'locator', 'arc']
       }],
-    eis: []
+    elementInfos: []
   };
   return {
     WMS_1_3_0: WMS_1_3_0,

@@ -1,9 +1,9 @@
 var Jsonix = require('jsonix').Jsonix;
-var RISBKA = require('../mappings/RISBKA').RISBKA;
+var OGD = require('../mappings/OGD').OGD;
 
 var roundtrips = require('./roundtrip').roundtrips;
 
-var mappings = [RISBKA];
+var mappings = [OGD];
 
 module.exports = {
 	"Context": function(test) {

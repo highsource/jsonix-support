@@ -3,5 +3,5 @@ process.on('uncaughtException', function(err) {
 });
 module.exports = 
 {
-	"ris-bka": require('./ris-bka')
+	"OGD": require('./OGD')
 };

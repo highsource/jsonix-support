@@ -1,0 +1,6 @@
+<ogd:OGDSearchRequest
+	xmlns:ogd="http://ris.bka.gv.at/Search/1.3/OGD">
+	<ogd:Kundmachungsorgannummer>
+		<ogd:Value>test</ogd:Value>
+	</ogd:Kundmachungsorgannummer>
+</ogd:OGDSearchRequest>

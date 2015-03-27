@@ -1,0 +1,10 @@
+<ogd:OGDSearchRequest
+	xmlns:ogd="http://ris.bka.gv.at/Search/1.3/OGD"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ogd:Suchworte xsi:type="ogd:PhraseSearchExpression">
+		<ogd:Value>test</ogd:Value>
+	</ogd:Suchworte>
+	<ogd:Kundmachungsorgannummer>
+		<ogd:Value>test</ogd:Value>
+	</ogd:Kundmachungsorgannummer>
+</ogd:OGDSearchRequest>

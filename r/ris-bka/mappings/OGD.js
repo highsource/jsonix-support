@@ -11,8 +11,30 @@ var OGD_Module_Factory = function () {
             ti: '.ArrayOfSearchExpression'
           }]
       }, {
-        ln: 'OrSearchExpression',
-        bti: '.BooleanSearchExpression'
+        ln: 'SearchExpression'
+      }, {
+        ln: 'ArrayOfSearchExpression',
+        ps: [{
+            n: 'searchExpression',
+            col: true,
+            en: 'SearchExpression',
+            ti: '.SearchExpression'
+          }]
+      }, {
+        ln: 'TermSearchExpression',
+        bti: '.SearchExpression',
+        ps: [{
+            n: 'value',
+            en: 'Value'
+          }]
+      }, {
+        ln: 'NotSearchExpression',
+        bti: '.SearchExpression',
+        ps: [{
+            n: 'expression',
+            en: 'Expression',
+            ti: '.SearchExpression'
+          }]
       }, {
         ln: 'BundesnormenSortExpression',
         ps: [{
@@ -23,7 +45,34 @@ var OGD_Module_Factory = function () {
             en: 'SortedByColumn'
           }]
       }, {
+        ln: 'AndSearchExpression',
+        bti: '.BooleanSearchExpression'
+      }, {
+        ln: 'OrSearchExpression',
+        bti: '.BooleanSearchExpression'
+      }, {
+        ln: 'NormabschnittSucheinschraenkung',
+        ps: [{
+            n: 'nummerVon',
+            en: 'NummerVon',
+            ti: 'Int'
+          }, {
+            n: 'buchstabeVon',
+            en: 'BuchstabeVon'
+          }, {
+            n: 'nummerBis',
+            en: 'NummerBis',
+            ti: 'Int'
+          }, {
+            n: 'buchstabeBis',
+            en: 'BuchstabeBis'
+          }, {
+            n: 'typ',
+            en: 'Typ'
+          }]
+      }, {
         ln: 'TOGDSearchRequest',
+        tn: 'T_OGDSearchRequest',
         ps: [{
             n: 'suchworte',
             en: 'Suchworte',
@@ -68,54 +117,6 @@ var OGD_Module_Factory = function () {
             ti: '.BundesnormenSortExpression'
           }]
       }, {
-        ln: 'TermSearchExpression',
-        bti: '.SearchExpression',
-        ps: [{
-            n: 'value',
-            en: 'Value'
-          }]
-      }, {
-        ln: 'AndSearchExpression',
-        bti: '.BooleanSearchExpression'
-      }, {
-        ln: 'SearchExpression'
-      }, {
-        ln: 'ArrayOfSearchExpression',
-        ps: [{
-            n: 'searchExpression',
-            col: true,
-            en: 'SearchExpression',
-            ti: '.SearchExpression'
-          }]
-      }, {
-        ln: 'NormabschnittSucheinschraenkung',
-        ps: [{
-            n: 'nummerVon',
-            en: 'NummerVon',
-            ti: 'Int'
-          }, {
-            n: 'buchstabeVon',
-            en: 'BuchstabeVon'
-          }, {
-            n: 'nummerBis',
-            en: 'NummerBis',
-            ti: 'Int'
-          }, {
-            n: 'buchstabeBis',
-            en: 'BuchstabeBis'
-          }, {
-            n: 'typ',
-            en: 'Typ'
-          }]
-      }, {
-        ln: 'NotSearchExpression',
-        bti: '.SearchExpression',
-        ps: [{
-            n: 'expression',
-            en: 'Expression',
-            ti: '.SearchExpression'
-          }]
-      }, {
         ln: 'PhraseSearchExpression',
         bti: '.SearchExpression',
         ps: [{
@@ -124,8 +125,16 @@ var OGD_Module_Factory = function () {
           }]
       }, {
         t: 'enum',
+        ln: 'NormabschnittTyp',
+        vs: ['Alle', 'Artikel', 'Paragraph', 'Anlage']
+      }, {
+        t: 'enum',
         ln: 'BundesnormenSortableColumn',
         vs: ['ArtikelParagraphAnlage', 'Kurzinformation']
+      }, {
+        t: 'enum',
+        ln: 'WebSortDirection',
+        vs: ['Ascending', 'Descending']
       }, {
         t: 'enum',
         ln: 'ChangeSetInterval',
@@ -134,14 +143,6 @@ var OGD_Module_Factory = function () {
         t: 'enum',
         ln: 'PageSize',
         vs: ['Ten', 'Twenty', 'Fifty', 'OneHundred']
-      }, {
-        t: 'enum',
-        ln: 'WebSortDirection',
-        vs: ['Ascending', 'Descending']
-      }, {
-        t: 'enum',
-        ln: 'NormabschnittTyp',
-        vs: ['Alle', 'Artikel', 'Paragraph', 'Anlage']
       }],
     eis: [{
         en: 'OGDSearchRequest',

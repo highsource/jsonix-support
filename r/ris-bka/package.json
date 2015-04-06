@@ -14,7 +14,6 @@
 		"nodeunit" : "0.x.x"
 	},
 	"scripts": {
-		"prepublish" : "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -compact -d mappings schemas -b bindings",
-		"test": "nodeunit tests/tests.js" 
+		"test": "nodeunit tests/tests.js", 
 	}
 }

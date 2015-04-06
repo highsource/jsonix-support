@@ -3,5 +3,5 @@ process.on('uncaughtException', function(err) {
 });
 module.exports = 
 {
-	"OGD_Request": require('./OGD_Request')
+	"OGD": require('./OGD')
 };

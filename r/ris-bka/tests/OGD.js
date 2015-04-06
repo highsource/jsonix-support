@@ -1,9 +1,11 @@
 var Jsonix = require('jsonix').Jsonix;
-var OGD_Request = require('../mappings/OGD_Request').OGD_Request;
+var OGD_DocumentResponse = require('../mappings/OGD_DocumentResponse').OGD_DocumentResponse;
+var RISDok = require('../mappings/RISDok').RISDok;
+var RISJudikaturNutzdaten = require('../mappings/RISJudikaturNutzdaten').RISJudikaturNutzdaten;
 
 var roundtrips = require('./roundtrip').roundtrips;
 
-var mappings = [OGD_Request];
+var mappings = [OGD_DocumentResponse, RISDok, RISJudikaturNutzdaten];
 
 module.exports = {
 	"Context": function(test) {

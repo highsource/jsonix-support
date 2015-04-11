@@ -4,10 +4,10 @@
 	jaxb:extensionBindingPrefixes="jsonix">
 
 	<jaxb:bindings 
-		schemaLocation="../schemas/OGD_Request.xsd" 
+		schemaLocation="../schemas/w3c/2003/05/soap-envelope.xsd" 
 		node="/xs:schema">
-		<jsonix:module name="OGD">
-			<jsonix:mapping name="OGD" package="at.gv.bka.ris.search.v_1_3.ogd"/>
+		<jsonix:module name="SOAP_1_2">
+			<jsonix:mapping name="SOAP_Envelope" package="org.hisrc.w3c.soap.v_1_2.envelope"/>
 		</jsonix:module>
 	</jaxb:bindings>
 

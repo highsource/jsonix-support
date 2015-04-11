@@ -4,10 +4,10 @@
 	jaxb:extensionBindingPrefixes="xjc">
 
 	<jaxb:bindings 
-		schemaLocation="../schemas/OGD_Request.xsd" 
+		schemaLocation="../schemas/ris/OGD_DocumentResponse.xsd" 
 		node="/xs:schema">
 		<jaxb:schemaBindings>
-			<jaxb:package name="at.gv.bka.ris.search.v_1_3.ogd"/>
+			<jaxb:package name="at.gv.bka.ris.search.v_1_3.ogd.documentresponse"/>
 		</jaxb:schemaBindings>
 	</jaxb:bindings>
 

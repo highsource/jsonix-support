@@ -8,12 +8,13 @@
 	"main": "lib/index.js",
 	"dependencies": {
 		"jsonix": "2.x.x",
-		"jsonix-schema-compiler": "2.x.x"
+		"jsonix-schema-compiler": ">=2.3.3"
 	},
 	"devDependencies" : {
 		"nodeunit" : "0.x.x"
 	},
 	"scripts": {
-		"test": "nodeunit tests/tests.js", 
+		"test": "nodeunit tests/tests.js",
+		"prepublish" : "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -compact -catalog schemas/catalog.cat -d mappings schemas/ris schemas/w3c/2003/05 -b bindings"
 	}
 }

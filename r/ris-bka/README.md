@@ -1,7 +1,10 @@
-# RIS-BKA Demo
+# RIS-BKA Support
 
-To generate:
+This is a support project for [ris-bka](https://github.com/ximex/ris-bka).
+
+To build:
 
 ```
-"prepublish" : "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -compact -d mappings schemas/ris schemas/w3c/2003/05 -b bindings",	}
+npm install
+npm test
 ```

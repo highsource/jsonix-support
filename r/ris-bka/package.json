@@ -7,7 +7,7 @@
 	],
 	"main": "lib/index.js",
 	"dependencies": {
-		"jsonix": "2.x.x",
+		"jsonix": ">=2.2.1",
 		"jsonix-schema-compiler": ">=2.3.3"
 	},
 	"devDependencies" : {

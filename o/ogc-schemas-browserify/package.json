@@ -1,0 +1,22 @@
+{
+  "name": "test-ogc-schema-ol3",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node_ok": "node app_wms_node.js",
+    "build_browserify": "./node_modules/.bin/browserify js/app.js -o js/bundle.js",
+    "build_browserify_hack": "cat node_modules/w3c-schemas/lib/XLink_1_0.js node_modules/ogc-schemas/lib/OWS_1_1_0.js node_modules/ogc-schemas/lib/WMS_1_3_0.js js/app_hack.js > temp.js && ./node_modules/.bin/browserify temp.js -o js/bundle.js && rm temp.js"
+  },
+  "author": "Thomas Gratier",
+  "license": "ISC",
+  "dependencies": {
+    "jsonix": "^2.2.1",
+    "ogc-schemas": "^2.2.0",
+    "w3c-schemas": "^1.0.3"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.3"
+  }
+}

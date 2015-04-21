@@ -1,0 +1,38 @@
+{
+  "name": "performance-vs-ol3",
+  "version": "1.0.0",
+  "description": "Simple performance tests of parsing with OpenLayers 3 versus parsing with JSONIX",
+  "main": "index.js",
+  "scripts": {
+    "start": "watchify index.js --outfile bundle.js",
+    "build-uncompressed": "browserify index.js --outfile bundle.js",
+    "build": "browserify index.js | uglifyjs --compress --output bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/highsource/jsonix-support.git"
+  },
+  "keywords": [
+    "JSONIX",
+    "OGC",
+    "WMS",
+    "Capabilities",
+    "OpenLayers",
+    "Performance"
+  ],
+  "author": "Bart van den Eijnden",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/highsource/jsonix-support/issues"
+  },
+  "homepage": "https://github.com/highsource/jsonix-support",
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "jsonix": "^2.2.1",
+    "ogc-schemas": "^2.2.0",
+    "openlayers": "^3.4.0",
+    "uglify-js": "^2.4.20",
+    "w3c-schemas": "^1.1.0",
+    "watchify": "^3.1.1"
+  }
+}

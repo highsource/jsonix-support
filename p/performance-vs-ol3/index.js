@@ -8,7 +8,8 @@ var ol = require('openlayers');
 var format = new ol.format.WMSCapabilities();
 
 var context = new Jsonix.Context([XLink_1_0, OWS_1_1_0, WMS_1_3_0], {
-    mappingStyle : 'simplified',
+//    mappingStyle : 'simplified',
+    supportXsiType : false,
     namespacePrefixes: {
         'http://www.w3.org/1999/xlink': 'xlink',
         'http://www.opengis.net/wms': 'wms',

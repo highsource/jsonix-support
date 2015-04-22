@@ -25,15 +25,19 @@ xhr.open('GET', 'caps.xml', true);
 xhr.onload = function (e) {
   if (xhr.readyState === 4) {
     if (xhr.status === 200) {
-      for (var i=0; i<10; i++) {
+      for (var i=0; i<1; i++) {
         console.time('JSONIX');
         var jsonixResult = unmarshaller.unmarshalDocument(xhr.responseXML);
         console.timeEnd('JSONIX');
+        console.log("Jsonix result start");
         console.log(JSON.stringify(jsonixResult, null, 2));
+        console.log("Jsonix result end");
         console.time('ol3');
         var ol3Result = format.read(xhr.responseXML);
-        console.log(JSON.stringify(ol3Result, null, 2));
         console.timeEnd('ol3');
+        console.log("ol3 result start");
+        console.log(JSON.stringify(ol3Result, null, 2));
+        console.log("ol3 result end");
       }
     } else {
       console.error(xhr.statusText);

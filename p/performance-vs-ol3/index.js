@@ -28,10 +28,10 @@ xhr.onload = function (e) {
         console.time('JSONIX');
         var jsonixResult = unmarshaller.unmarshalDocument(xhr.responseXML);
         console.timeEnd('JSONIX');
-        console.log(JSON.stringify(jsonixResult));
+        console.log(JSON.stringify(jsonixResult, null, 2));
         console.time('ol3');
         var ol3Result = format.read(xhr.responseXML);
-        console.log(JSON.stringify(ol3Result));
+        console.log(JSON.stringify(ol3Result, null, 2));
         console.timeEnd('ol3');
       }
     } else {

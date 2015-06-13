@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="urban" xmlns:ns1="urban">
+
+    <xs:element name="localisation" type="ns1:LocaType"> </xs:element>
+    <xs:complexType name="LocaType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="oldName" type="xs:string"/>
+            <xs:element name="streetName" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

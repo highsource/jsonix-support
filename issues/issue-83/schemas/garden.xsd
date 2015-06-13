@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="rural" xmlns:ns2="rural">
+
+    <xs:element name="localisation" type="ns2:LocaType"> </xs:element>
+    <xs:complexType name="LocaType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="swingCount" type="xs:int"/>
+            <xs:element name="kennelCount" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

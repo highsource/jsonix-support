@@ -1,0 +1,23 @@
+{
+    "name": {
+        "localPart": "shiporder"
+    },
+    "value": {
+        "orderid": "123",
+        "orderperson": "Scott Tiger",
+        "shipto": {
+            "name": "Scott Tiger",
+            "address": "Main Road, 3",
+            "city": "Main City",
+            "country": "Any Country"
+        },
+        "item": [
+            {
+                "title": "Bimble",
+                "note": "Advanced bimble for your gorble",
+                "quantity": 5,
+                "price": 15.35
+            }
+        ]
+    }
+}

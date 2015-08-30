@@ -1,0 +1,15 @@
+<shiporder orderid="123">
+	<orderperson>Scott Tiger</orderperson>
+	<shipto>
+		<name>Scott Tiger</name>
+		<address>Main Road, 3</address>
+		<city>Main City</city>
+		<country>Any Country</country>
+	</shipto>
+	<item>
+		<title>Bimble</title>
+		<note>Advanced bimble for your gorble</note>
+		<quantity>5</quantity>
+		<price>15.35</price>
+	</item>
+</shiporder>

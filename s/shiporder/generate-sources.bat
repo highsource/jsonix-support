@@ -1,0 +1,1 @@
+java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -generateJsonSchema -d mappings -b bindings -p ShipOrder -logLevel DEBUG schemas

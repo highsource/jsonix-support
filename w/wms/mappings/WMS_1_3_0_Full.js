@@ -4,57 +4,325 @@ var WMS_1_3_0_Full_Module_Factory = function () {
     defaultElementNamespaceURI: 'http:\/\/www.opengis.net\/wms',
     dependencies: ['XLink_1_0'],
     typeInfos: [{
-        localName: 'ContactAddress',
+        localName: 'Keyword',
+        typeName: null,
         propertyInfos: [{
-            name: 'addressType',
-            elementName: 'AddressType'
+            name: 'value',
+            type: 'value'
           }, {
-            name: 'address',
-            elementName: 'Address'
-          }, {
-            name: 'city',
-            elementName: 'City'
-          }, {
-            name: 'stateOrProvince',
-            elementName: 'StateOrProvince'
-          }, {
-            name: 'postCode',
-            elementName: 'PostCode'
-          }, {
-            name: 'country',
-            elementName: 'Country'
+            name: 'vocabulary',
+            attributeName: {
+              localPart: 'vocabulary'
+            },
+            type: 'attribute'
           }]
       }, {
-        localName: 'WMSCapabilities',
+        localName: 'DCPType',
+        typeName: null,
         propertyInfos: [{
-            name: 'service',
-            elementName: 'Service',
-            typeInfo: '.Service'
+            name: 'http',
+            required: true,
+            elementName: 'HTTP',
+            typeInfo: '.HTTP'
+          }]
+      }, {
+        localName: 'Capability',
+        typeName: null,
+        propertyInfos: [{
+            name: 'request',
+            required: true,
+            elementName: 'Request',
+            typeInfo: '.Request'
           }, {
-            name: 'capability',
-            elementName: 'Capability',
-            typeInfo: '.Capability'
+            name: 'exception',
+            required: true,
+            elementName: 'Exception',
+            typeInfo: '.Exception'
           }, {
-            name: 'version',
+            name: 'extendedCapabilities',
+            minOccurs: 0,
+            collection: true,
+            elementName: '_ExtendedCapabilities',
+            typeInfo: 'AnyType'
+          }, {
+            name: 'layer',
+            elementName: 'Layer',
+            typeInfo: '.Layer'
+          }]
+      }, {
+        localName: 'EXGeographicBoundingBox',
+        typeName: null,
+        propertyInfos: [{
+            name: 'westBoundLongitude',
+            required: true,
+            typeInfo: 'Double'
+          }, {
+            name: 'eastBoundLongitude',
+            required: true,
+            typeInfo: 'Double'
+          }, {
+            name: 'southBoundLatitude',
+            required: true,
+            typeInfo: 'Double'
+          }, {
+            name: 'northBoundLatitude',
+            required: true,
+            typeInfo: 'Double'
+          }]
+      }, {
+        localName: 'StyleSheetURL',
+        typeName: null,
+        propertyInfos: [{
+            name: 'format',
+            required: true,
+            elementName: 'Format'
+          }, {
+            name: 'onlineResource',
+            required: true,
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }]
+      }, {
+        localName: 'Post',
+        typeName: null,
+        propertyInfos: [{
+            name: 'onlineResource',
+            required: true,
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }]
+      }, {
+        localName: 'StyleURL',
+        typeName: null,
+        propertyInfos: [{
+            name: 'format',
+            required: true,
+            elementName: 'Format'
+          }, {
+            name: 'onlineResource',
+            required: true,
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }]
+      }, {
+        localName: 'Service',
+        typeName: null,
+        propertyInfos: [{
+            name: 'name',
+            required: true,
+            elementName: 'Name'
+          }, {
+            name: 'title',
+            required: true,
+            elementName: 'Title'
+          }, {
+            name: '_abstract',
+            elementName: 'Abstract'
+          }, {
+            name: 'keywordList',
+            elementName: 'KeywordList',
+            typeInfo: '.KeywordList'
+          }, {
+            name: 'onlineResource',
+            required: true,
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }, {
+            name: 'contactInformation',
+            elementName: 'ContactInformation',
+            typeInfo: '.ContactInformation'
+          }, {
+            name: 'fees',
+            elementName: 'Fees'
+          }, {
+            name: 'accessConstraints',
+            elementName: 'AccessConstraints'
+          }, {
+            name: 'layerLimit',
+            elementName: 'LayerLimit',
+            typeInfo: 'Integer'
+          }, {
+            name: 'maxWidth',
+            elementName: 'MaxWidth',
+            typeInfo: 'Integer'
+          }, {
+            name: 'maxHeight',
+            elementName: 'MaxHeight',
+            typeInfo: 'Integer'
+          }]
+      }, {
+        localName: 'HTTP',
+        typeName: null,
+        propertyInfos: [{
+            name: 'get',
+            required: true,
+            elementName: 'Get',
+            typeInfo: '.Get'
+          }, {
+            name: 'post',
+            elementName: 'Post',
+            typeInfo: '.Post'
+          }]
+      }, {
+        localName: 'LogoURL',
+        typeName: null,
+        propertyInfos: [{
+            name: 'format',
+            required: true,
+            elementName: 'Format'
+          }, {
+            name: 'onlineResource',
+            required: true,
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }, {
+            name: 'width',
+            typeInfo: 'Integer',
             attributeName: {
-              localPart: 'version'
+              localPart: 'width'
             },
             type: 'attribute'
           }, {
-            name: 'updateSequence',
+            name: 'height',
+            typeInfo: 'Integer',
             attributeName: {
-              localPart: 'updateSequence'
+              localPart: 'height'
             },
             type: 'attribute'
+          }]
+      }, {
+        localName: 'FeatureListURL',
+        typeName: null,
+        propertyInfos: [{
+            name: 'format',
+            required: true,
+            elementName: 'Format'
+          }, {
+            name: 'onlineResource',
+            required: true,
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }]
+      }, {
+        localName: 'Exception',
+        typeName: null,
+        propertyInfos: [{
+            name: 'format',
+            required: true,
+            collection: true,
+            elementName: 'Format'
+          }]
+      }, {
+        localName: 'BoundingBox',
+        typeName: null,
+        propertyInfos: [{
+            name: 'crs',
+            required: true,
+            attributeName: {
+              localPart: 'CRS'
+            },
+            type: 'attribute'
+          }, {
+            name: 'minx',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'minx'
+            },
+            type: 'attribute'
+          }, {
+            name: 'miny',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'miny'
+            },
+            type: 'attribute'
+          }, {
+            name: 'maxx',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'maxx'
+            },
+            type: 'attribute'
+          }, {
+            name: 'maxy',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'maxy'
+            },
+            type: 'attribute'
+          }, {
+            name: 'resx',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'resx'
+            },
+            type: 'attribute'
+          }, {
+            name: 'resy',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'resy'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'Identifier',
+        typeName: null,
+        propertyInfos: [{
+            name: 'value',
+            type: 'value'
+          }, {
+            name: 'authority',
+            required: true,
+            attributeName: {
+              localPart: 'authority'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'AuthorityURL',
+        typeName: null,
+        propertyInfos: [{
+            name: 'onlineResource',
+            required: true,
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }, {
+            name: 'name',
+            required: true,
+            attributeName: {
+              localPart: 'name'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'DataURL',
+        typeName: null,
+        propertyInfos: [{
+            name: 'format',
+            required: true,
+            elementName: 'Format'
+          }, {
+            name: 'onlineResource',
+            required: true,
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
           }]
       }, {
         localName: 'Request',
+        typeName: null,
         propertyInfos: [{
             name: 'getCapabilities',
+            required: true,
             elementName: 'GetCapabilities',
             typeInfo: '.OperationType'
           }, {
             name: 'getMap',
+            required: true,
             elementName: 'GetMap',
             typeInfo: '.OperationType'
           }, {
@@ -63,71 +331,14 @@ var WMS_1_3_0_Full_Module_Factory = function () {
             typeInfo: '.OperationType'
           }, {
             name: 'extendedOperation',
+            minOccurs: 0,
             collection: true,
             elementName: '_ExtendedOperation',
             typeInfo: '.OperationType'
           }]
       }, {
-        localName: 'Dimension',
-        propertyInfos: [{
-            name: 'value',
-            type: 'value'
-          }, {
-            name: 'name',
-            attributeName: {
-              localPart: 'name'
-            },
-            type: 'attribute'
-          }, {
-            name: 'units',
-            attributeName: {
-              localPart: 'units'
-            },
-            type: 'attribute'
-          }, {
-            name: 'unitSymbol',
-            attributeName: {
-              localPart: 'unitSymbol'
-            },
-            type: 'attribute'
-          }, {
-            name: '_default',
-            attributeName: {
-              localPart: 'default'
-            },
-            type: 'attribute'
-          }, {
-            name: 'multipleValues',
-            typeInfo: 'Boolean',
-            attributeName: {
-              localPart: 'multipleValues'
-            },
-            type: 'attribute'
-          }, {
-            name: 'nearestValue',
-            typeInfo: 'Boolean',
-            attributeName: {
-              localPart: 'nearestValue'
-            },
-            type: 'attribute'
-          }, {
-            name: 'current',
-            typeInfo: 'Boolean',
-            attributeName: {
-              localPart: 'current'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'KeywordList',
-        propertyInfos: [{
-            name: 'keyword',
-            collection: true,
-            elementName: 'Keyword',
-            typeInfo: '.Keyword'
-          }]
-      }, {
         localName: 'OnlineResource',
+        typeName: null,
         propertyInfos: [{
             name: 'type',
             attributeName: {
@@ -179,78 +390,64 @@ var WMS_1_3_0_Full_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Post',
+        localName: 'ContactAddress',
+        typeName: null,
         propertyInfos: [{
-            name: 'onlineResource',
-            elementName: 'OnlineResource',
-            typeInfo: '.OnlineResource'
+            name: 'addressType',
+            required: true,
+            elementName: 'AddressType'
+          }, {
+            name: 'address',
+            required: true,
+            elementName: 'Address'
+          }, {
+            name: 'city',
+            required: true,
+            elementName: 'City'
+          }, {
+            name: 'stateOrProvince',
+            required: true,
+            elementName: 'StateOrProvince'
+          }, {
+            name: 'postCode',
+            required: true,
+            elementName: 'PostCode'
+          }, {
+            name: 'country',
+            required: true,
+            elementName: 'Country'
           }]
       }, {
-        localName: 'LogoURL',
+        localName: 'OperationType',
         propertyInfos: [{
             name: 'format',
+            required: true,
+            collection: true,
             elementName: 'Format'
           }, {
-            name: 'onlineResource',
-            elementName: 'OnlineResource',
-            typeInfo: '.OnlineResource'
-          }, {
-            name: 'width',
-            typeInfo: 'Integer',
-            attributeName: {
-              localPart: 'width'
-            },
-            type: 'attribute'
-          }, {
-            name: 'height',
-            typeInfo: 'Integer',
-            attributeName: {
-              localPart: 'height'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'Capability',
-        propertyInfos: [{
-            name: 'request',
-            elementName: 'Request',
-            typeInfo: '.Request'
-          }, {
-            name: 'exception',
-            elementName: 'Exception',
-            typeInfo: '.Exception'
-          }, {
-            name: 'extendedCapabilities',
+            name: 'dcpType',
+            required: true,
             collection: true,
-            elementName: '_ExtendedCapabilities',
-            typeInfo: 'AnyType'
-          }, {
-            name: 'layer',
-            elementName: 'Layer',
-            typeInfo: '.Layer'
-          }]
-      }, {
-        localName: 'ContactPersonPrimary',
-        propertyInfos: [{
-            name: 'contactPerson',
-            elementName: 'ContactPerson'
-          }, {
-            name: 'contactOrganization',
-            elementName: 'ContactOrganization'
+            elementName: 'DCPType',
+            typeInfo: '.DCPType'
           }]
       }, {
         localName: 'Style',
+        typeName: null,
         propertyInfos: [{
             name: 'name',
+            required: true,
             elementName: 'Name'
           }, {
             name: 'title',
+            required: true,
             elementName: 'Title'
           }, {
             name: '_abstract',
             elementName: 'Abstract'
           }, {
             name: 'legendURL',
+            minOccurs: 0,
             collection: true,
             elementName: 'LegendURL',
             typeInfo: '.LegendURL'
@@ -264,40 +461,20 @@ var WMS_1_3_0_Full_Module_Factory = function () {
             typeInfo: '.StyleURL'
           }]
       }, {
-        localName: 'StyleURL',
+        localName: 'ContactPersonPrimary',
+        typeName: null,
         propertyInfos: [{
-            name: 'format',
-            elementName: 'Format'
+            name: 'contactPerson',
+            required: true,
+            elementName: 'ContactPerson'
           }, {
-            name: 'onlineResource',
-            elementName: 'OnlineResource',
-            typeInfo: '.OnlineResource'
-          }]
-      }, {
-        localName: 'HTTP',
-        propertyInfos: [{
-            name: 'get',
-            elementName: 'Get',
-            typeInfo: '.Get'
-          }, {
-            name: 'post',
-            elementName: 'Post',
-            typeInfo: '.Post'
-          }]
-      }, {
-        localName: 'Keyword',
-        propertyInfos: [{
-            name: 'value',
-            type: 'value'
-          }, {
-            name: 'vocabulary',
-            attributeName: {
-              localPart: 'vocabulary'
-            },
-            type: 'attribute'
+            name: 'contactOrganization',
+            required: true,
+            elementName: 'ContactOrganization'
           }]
       }, {
         localName: 'ContactInformation',
+        typeName: null,
         propertyInfos: [{
             name: 'contactPersonPrimary',
             elementName: 'ContactPersonPrimary',
@@ -320,30 +497,71 @@ var WMS_1_3_0_Full_Module_Factory = function () {
             elementName: 'ContactElectronicMailAddress'
           }]
       }, {
-        localName: 'StyleSheetURL',
+        localName: 'Get',
+        typeName: null,
         propertyInfos: [{
-            name: 'format',
-            elementName: 'Format'
-          }, {
             name: 'onlineResource',
+            required: true,
             elementName: 'OnlineResource',
             typeInfo: '.OnlineResource'
           }]
       }, {
-        localName: 'AuthorityURL',
+        localName: 'Dimension',
+        typeName: null,
         propertyInfos: [{
-            name: 'onlineResource',
-            elementName: 'OnlineResource',
-            typeInfo: '.OnlineResource'
+            name: 'value',
+            type: 'value'
           }, {
             name: 'name',
+            required: true,
             attributeName: {
               localPart: 'name'
+            },
+            type: 'attribute'
+          }, {
+            name: 'units',
+            required: true,
+            attributeName: {
+              localPart: 'units'
+            },
+            type: 'attribute'
+          }, {
+            name: 'unitSymbol',
+            attributeName: {
+              localPart: 'unitSymbol'
+            },
+            type: 'attribute'
+          }, {
+            name: '_default',
+            attributeName: {
+              localPart: 'default'
+            },
+            type: 'attribute'
+          }, {
+            name: 'multipleValues',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'multipleValues'
+            },
+            type: 'attribute'
+          }, {
+            name: 'nearestValue',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'nearestValue'
+            },
+            type: 'attribute'
+          }, {
+            name: 'current',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'current'
             },
             type: 'attribute'
           }]
       }, {
         localName: 'Attribution',
+        typeName: null,
         propertyInfos: [{
             name: 'title',
             elementName: 'Title'
@@ -357,95 +575,14 @@ var WMS_1_3_0_Full_Module_Factory = function () {
             typeInfo: '.LogoURL'
           }]
       }, {
-        localName: 'FeatureListURL',
-        propertyInfos: [{
-            name: 'format',
-            elementName: 'Format'
-          }, {
-            name: 'onlineResource',
-            elementName: 'OnlineResource',
-            typeInfo: '.OnlineResource'
-          }]
-      }, {
-        localName: 'OperationType',
-        propertyInfos: [{
-            name: 'format',
-            collection: true,
-            elementName: 'Format'
-          }, {
-            name: 'dcpType',
-            collection: true,
-            elementName: 'DCPType',
-            typeInfo: '.DCPType'
-          }]
-      }, {
-        localName: 'Exception',
-        propertyInfos: [{
-            name: 'format',
-            collection: true,
-            elementName: 'Format'
-          }]
-      }, {
-        localName: 'Service',
-        propertyInfos: [{
-            name: 'name',
-            elementName: 'Name'
-          }, {
-            name: 'title',
-            elementName: 'Title'
-          }, {
-            name: '_abstract',
-            elementName: 'Abstract'
-          }, {
-            name: 'keywordList',
-            elementName: 'KeywordList',
-            typeInfo: '.KeywordList'
-          }, {
-            name: 'onlineResource',
-            elementName: 'OnlineResource',
-            typeInfo: '.OnlineResource'
-          }, {
-            name: 'contactInformation',
-            elementName: 'ContactInformation',
-            typeInfo: '.ContactInformation'
-          }, {
-            name: 'fees',
-            elementName: 'Fees'
-          }, {
-            name: 'accessConstraints',
-            elementName: 'AccessConstraints'
-          }, {
-            name: 'layerLimit',
-            elementName: 'LayerLimit',
-            typeInfo: 'Integer'
-          }, {
-            name: 'maxWidth',
-            elementName: 'MaxWidth',
-            typeInfo: 'Integer'
-          }, {
-            name: 'maxHeight',
-            elementName: 'MaxHeight',
-            typeInfo: 'Integer'
-          }]
-      }, {
-        localName: 'Identifier',
-        propertyInfos: [{
-            name: 'value',
-            type: 'value'
-          }, {
-            name: 'authority',
-            attributeName: {
-              localPart: 'authority'
-            },
-            type: 'attribute'
-          }]
-      }, {
         localName: 'Layer',
+        typeName: null,
         propertyInfos: [{
             name: 'name',
             elementName: 'Name'
           }, {
             name: 'title',
+            required: true,
             elementName: 'Title'
           }, {
             name: '_abstract',
@@ -456,6 +593,7 @@ var WMS_1_3_0_Full_Module_Factory = function () {
             typeInfo: '.KeywordList'
           }, {
             name: 'crs',
+            minOccurs: 0,
             collection: true,
             elementName: 'CRS'
           }, {
@@ -464,11 +602,13 @@ var WMS_1_3_0_Full_Module_Factory = function () {
             typeInfo: '.EXGeographicBoundingBox'
           }, {
             name: 'boundingBox',
+            minOccurs: 0,
             collection: true,
             elementName: 'BoundingBox',
             typeInfo: '.BoundingBox'
           }, {
             name: 'dimension',
+            minOccurs: 0,
             collection: true,
             elementName: 'Dimension',
             typeInfo: '.Dimension'
@@ -478,31 +618,37 @@ var WMS_1_3_0_Full_Module_Factory = function () {
             typeInfo: '.Attribution'
           }, {
             name: 'authorityURL',
+            minOccurs: 0,
             collection: true,
             elementName: 'AuthorityURL',
             typeInfo: '.AuthorityURL'
           }, {
             name: 'identifier',
+            minOccurs: 0,
             collection: true,
             elementName: 'Identifier',
             typeInfo: '.Identifier'
           }, {
             name: 'metadataURL',
+            minOccurs: 0,
             collection: true,
             elementName: 'MetadataURL',
             typeInfo: '.MetadataURL'
           }, {
             name: 'dataURL',
+            minOccurs: 0,
             collection: true,
             elementName: 'DataURL',
             typeInfo: '.DataURL'
           }, {
             name: 'featureListURL',
+            minOccurs: 0,
             collection: true,
             elementName: 'FeatureListURL',
             typeInfo: '.FeatureListURL'
           }, {
             name: 'style',
+            minOccurs: 0,
             collection: true,
             elementName: 'Style',
             typeInfo: '.Style'
@@ -516,6 +662,7 @@ var WMS_1_3_0_Full_Module_Factory = function () {
             typeInfo: 'Double'
           }, {
             name: 'layer',
+            minOccurs: 0,
             collection: true,
             elementName: 'Layer',
             typeInfo: '.Layer'
@@ -563,103 +710,15 @@ var WMS_1_3_0_Full_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'DCPType',
-        propertyInfos: [{
-            name: 'http',
-            elementName: 'HTTP',
-            typeInfo: '.HTTP'
-          }]
-      }, {
-        localName: 'BoundingBox',
-        propertyInfos: [{
-            name: 'crs',
-            attributeName: {
-              localPart: 'CRS'
-            },
-            type: 'attribute'
-          }, {
-            name: 'minx',
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'minx'
-            },
-            type: 'attribute'
-          }, {
-            name: 'miny',
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'miny'
-            },
-            type: 'attribute'
-          }, {
-            name: 'maxx',
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'maxx'
-            },
-            type: 'attribute'
-          }, {
-            name: 'maxy',
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'maxy'
-            },
-            type: 'attribute'
-          }, {
-            name: 'resx',
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'resx'
-            },
-            type: 'attribute'
-          }, {
-            name: 'resy',
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'resy'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'DataURL',
-        propertyInfos: [{
-            name: 'format',
-            elementName: 'Format'
-          }, {
-            name: 'onlineResource',
-            elementName: 'OnlineResource',
-            typeInfo: '.OnlineResource'
-          }]
-      }, {
-        localName: 'MetadataURL',
-        propertyInfos: [{
-            name: 'format',
-            elementName: 'Format'
-          }, {
-            name: 'onlineResource',
-            elementName: 'OnlineResource',
-            typeInfo: '.OnlineResource'
-          }, {
-            name: 'type',
-            attributeName: {
-              localPart: 'type'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'Get',
-        propertyInfos: [{
-            name: 'onlineResource',
-            elementName: 'OnlineResource',
-            typeInfo: '.OnlineResource'
-          }]
-      }, {
         localName: 'LegendURL',
+        typeName: null,
         propertyInfos: [{
             name: 'format',
+            required: true,
             elementName: 'Format'
           }, {
             name: 'onlineResource',
+            required: true,
             elementName: 'OnlineResource',
             typeInfo: '.OnlineResource'
           }, {
@@ -678,179 +737,220 @@ var WMS_1_3_0_Full_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'EXGeographicBoundingBox',
+        localName: 'WMSCapabilities',
+        typeName: null,
         propertyInfos: [{
-            name: 'westBoundLongitude',
-            typeInfo: 'Double'
+            name: 'service',
+            required: true,
+            elementName: 'Service',
+            typeInfo: '.Service'
           }, {
-            name: 'eastBoundLongitude',
-            typeInfo: 'Double'
+            name: 'capability',
+            required: true,
+            elementName: 'Capability',
+            typeInfo: '.Capability'
           }, {
-            name: 'southBoundLatitude',
-            typeInfo: 'Double'
+            name: 'version',
+            attributeName: {
+              localPart: 'version'
+            },
+            type: 'attribute'
           }, {
-            name: 'northBoundLatitude',
-            typeInfo: 'Double'
+            name: 'updateSequence',
+            attributeName: {
+              localPart: 'updateSequence'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'KeywordList',
+        typeName: null,
+        propertyInfos: [{
+            name: 'keyword',
+            minOccurs: 0,
+            collection: true,
+            elementName: 'Keyword',
+            typeInfo: '.Keyword'
+          }]
+      }, {
+        localName: 'MetadataURL',
+        typeName: null,
+        propertyInfos: [{
+            name: 'format',
+            required: true,
+            elementName: 'Format'
+          }, {
+            name: 'onlineResource',
+            required: true,
+            elementName: 'OnlineResource',
+            typeInfo: '.OnlineResource'
+          }, {
+            name: 'type',
+            required: true,
+            attributeName: {
+              localPart: 'type'
+            },
+            type: 'attribute'
           }]
       }],
     elementInfos: [{
-        elementName: 'AccessConstraints'
-      }, {
-        elementName: 'StyleURL',
-        typeInfo: '.StyleURL'
-      }, {
-        elementName: 'AuthorityURL',
-        typeInfo: '.AuthorityURL'
-      }, {
-        elementName: 'Name'
-      }, {
-        elementName: 'Capability',
-        typeInfo: '.Capability'
-      }, {
-        elementName: 'Service',
-        typeInfo: '.Service'
-      }, {
-        elementName: 'WMS_Capabilities',
-        typeInfo: '.WMSCapabilities'
-      }, {
-        elementName: 'GetCapabilities',
-        typeInfo: '.OperationType'
-      }, {
-        elementName: '_ExtendedOperation',
-        typeInfo: '.OperationType'
-      }, {
-        elementName: 'Address'
-      }, {
-        elementName: 'LegendURL',
-        typeInfo: '.LegendURL'
-      }, {
-        elementName: 'ContactVoiceTelephone'
-      }, {
-        elementName: 'BoundingBox',
-        typeInfo: '.BoundingBox'
-      }, {
-        elementName: 'PostCode'
-      }, {
-        elementName: 'Keyword',
-        typeInfo: '.Keyword'
-      }, {
-        elementName: 'Post',
-        typeInfo: '.Post'
-      }, {
-        elementName: 'Style',
-        typeInfo: '.Style'
-      }, {
-        elementName: 'GetMap',
-        typeInfo: '.OperationType'
-      }, {
-        elementName: 'Title'
-      }, {
-        elementName: 'City'
-      }, {
-        elementName: 'MetadataURL',
-        typeInfo: '.MetadataURL'
-      }, {
         elementName: 'FeatureListURL',
         typeInfo: '.FeatureListURL'
-      }, {
-        elementName: 'Attribution',
-        typeInfo: '.Attribution'
-      }, {
-        elementName: 'ContactFacsimileTelephone'
-      }, {
-        elementName: 'LayerLimit',
-        typeInfo: 'Integer'
-      }, {
-        elementName: 'CRS'
-      }, {
-        elementName: 'GetFeatureInfo',
-        typeInfo: '.OperationType'
-      }, {
-        elementName: 'ContactElectronicMailAddress'
-      }, {
-        elementName: 'LogoURL',
-        typeInfo: '.LogoURL'
-      }, {
-        elementName: 'Exception',
-        typeInfo: '.Exception'
-      }, {
-        elementName: 'MaxWidth',
-        typeInfo: 'Integer'
-      }, {
-        elementName: 'Request',
-        typeInfo: '.Request'
-      }, {
-        elementName: 'EX_GeographicBoundingBox',
-        typeInfo: '.EXGeographicBoundingBox'
-      }, {
-        elementName: 'DCPType',
-        typeInfo: '.DCPType'
       }, {
         elementName: 'HTTP',
         typeInfo: '.HTTP'
       }, {
-        elementName: 'Get',
-        typeInfo: '.Get'
-      }, {
-        elementName: 'Abstract'
-      }, {
-        elementName: '_ExtendedCapabilities',
-        typeInfo: 'AnyType'
-      }, {
         elementName: 'KeywordList',
         typeInfo: '.KeywordList'
       }, {
-        elementName: 'ContactAddress',
-        typeInfo: '.ContactAddress'
-      }, {
-        elementName: 'Layer',
-        typeInfo: '.Layer'
-      }, {
-        elementName: 'ContactPerson'
-      }, {
-        elementName: 'StateOrProvince'
+        elementName: 'LegendURL',
+        typeInfo: '.LegendURL'
       }, {
         elementName: 'MaxHeight',
         typeInfo: 'Integer'
       }, {
-        elementName: 'Country'
+        elementName: 'Title'
       }, {
-        elementName: 'Identifier',
-        typeInfo: '.Identifier'
+        elementName: 'ContactElectronicMailAddress'
       }, {
-        elementName: 'MaxScaleDenominator',
-        typeInfo: 'Double'
+        elementName: 'ContactFacsimileTelephone'
       }, {
-        elementName: 'MinScaleDenominator',
-        typeInfo: 'Double'
+        elementName: 'WMS_Capabilities',
+        typeInfo: '.WMSCapabilities'
       }, {
-        elementName: 'Format'
+        elementName: 'ContactAddress',
+        typeInfo: '.ContactAddress'
       }, {
-        elementName: 'DataURL',
-        typeInfo: '.DataURL'
+        elementName: 'StyleURL',
+        typeInfo: '.StyleURL'
       }, {
-        elementName: 'Fees'
+        elementName: 'DCPType',
+        typeInfo: '.DCPType'
+      }, {
+        elementName: 'Service',
+        typeInfo: '.Service'
       }, {
         elementName: 'ContactPersonPrimary',
         typeInfo: '.ContactPersonPrimary'
       }, {
-        elementName: 'ContactOrganization'
-      }, {
-        elementName: 'StyleSheetURL',
-        typeInfo: '.StyleSheetURL'
-      }, {
-        elementName: 'AddressType'
-      }, {
         elementName: 'ContactInformation',
         typeInfo: '.ContactInformation'
+      }, {
+        elementName: 'Identifier',
+        typeInfo: '.Identifier'
+      }, {
+        elementName: 'AuthorityURL',
+        typeInfo: '.AuthorityURL'
+      }, {
+        elementName: 'Abstract'
+      }, {
+        elementName: 'ContactPerson'
+      }, {
+        elementName: 'MaxScaleDenominator',
+        typeInfo: 'Double'
+      }, {
+        elementName: 'Keyword',
+        typeInfo: '.Keyword'
+      }, {
+        elementName: 'Layer',
+        typeInfo: '.Layer'
       }, {
         elementName: 'Dimension',
         typeInfo: '.Dimension'
       }, {
+        elementName: 'Exception',
+        typeInfo: '.Exception'
+      }, {
+        elementName: 'DataURL',
+        typeInfo: '.DataURL'
+      }, {
+        elementName: 'StateOrProvince'
+      }, {
+        elementName: 'BoundingBox',
+        typeInfo: '.BoundingBox'
+      }, {
+        elementName: 'Style',
+        typeInfo: '.Style'
+      }, {
+        elementName: 'LayerLimit',
+        typeInfo: 'Integer'
+      }, {
         elementName: 'OnlineResource',
         typeInfo: '.OnlineResource'
       }, {
+        elementName: 'Post',
+        typeInfo: '.Post'
+      }, {
+        elementName: 'Country'
+      }, {
+        elementName: 'Format'
+      }, {
+        elementName: 'Name'
+      }, {
+        elementName: 'Attribution',
+        typeInfo: '.Attribution'
+      }, {
+        elementName: 'City'
+      }, {
+        elementName: 'Request',
+        typeInfo: '.Request'
+      }, {
+        elementName: 'Get',
+        typeInfo: '.Get'
+      }, {
+        elementName: 'AddressType'
+      }, {
+        elementName: 'Fees'
+      }, {
+        elementName: 'GetMap',
+        typeInfo: '.OperationType'
+      }, {
+        elementName: 'AccessConstraints'
+      }, {
+        elementName: 'LogoURL',
+        typeInfo: '.LogoURL'
+      }, {
+        elementName: '_ExtendedCapabilities',
+        typeInfo: 'AnyType'
+      }, {
+        elementName: 'StyleSheetURL',
+        typeInfo: '.StyleSheetURL'
+      }, {
+        elementName: 'EX_GeographicBoundingBox',
+        typeInfo: '.EXGeographicBoundingBox'
+      }, {
+        elementName: 'PostCode'
+      }, {
+        elementName: 'Address'
+      }, {
+        elementName: 'CRS'
+      }, {
+        elementName: 'ContactVoiceTelephone'
+      }, {
+        elementName: 'GetFeatureInfo',
+        typeInfo: '.OperationType'
+      }, {
+        elementName: 'MetadataURL',
+        typeInfo: '.MetadataURL'
+      }, {
+        elementName: 'ContactOrganization'
+      }, {
+        elementName: '_ExtendedOperation',
+        typeInfo: '.OperationType'
+      }, {
+        elementName: 'Capability',
+        typeInfo: '.Capability'
+      }, {
         elementName: 'ContactPosition'
+      }, {
+        elementName: 'GetCapabilities',
+        typeInfo: '.OperationType'
+      }, {
+        elementName: 'MaxWidth',
+        typeInfo: 'Integer'
+      }, {
+        elementName: 'MinScaleDenominator',
+        typeInfo: 'Double'
       }]
   };
   var XLink_1_0 = {
@@ -859,16 +959,16 @@ var WMS_1_3_0_Full_Module_Factory = function () {
     defaultAttributeNamespaceURI: 'http:\/\/www.w3.org\/1999\/xlink',
     typeInfos: [{
         type: 'enumInfo',
-        localName: 'ActuateType',
-        values: ['onLoad', 'onRequest', 'other', 'none']
-      }, {
-        type: 'enumInfo',
         localName: 'ShowType',
         values: ['new', 'replace', 'embed', 'other', 'none']
       }, {
         type: 'enumInfo',
         localName: 'TypeType',
         values: ['simple', 'extended', 'title', 'resource', 'locator', 'arc']
+      }, {
+        type: 'enumInfo',
+        localName: 'ActuateType',
+        values: ['onLoad', 'onRequest', 'other', 'none']
       }],
     elementInfos: []
   };

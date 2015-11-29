@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="urn:ietf:params:xml:ns:lost1" xmlns:p2="http://www.opengis.net/gml" xmlns:ns1="urn:ietf:params:xml:ns:lost1">
+  <xs:import namespace="http://www.opengis.net/gml" schemaLocation="p2.xsd"/>
+  <xs:element name="findService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:location"/>
+        <xs:element ref="ns1:service"/>
+      </xs:sequence>
+      <xs:attribute name="recursive" use="required" type="xs:boolean"/>
+      <xs:attribute name="serviceBoundary" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="location">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="p2:Point"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="profile" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="service" type="xs:NMTOKEN"/>
+</xs:schema>

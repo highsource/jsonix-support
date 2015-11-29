@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="urn:ietf:params:xml:ns:pidf:geopriv10:civicAddr" xmlns:ns2="urn:ietf:params:xml:ns:lost1" xmlns:ns1="urn:ietf:params:xml:ns:pidf:geopriv10:civicAddr">
+  <xs:import namespace="urn:ietf:params:xml:ns:lost1" schemaLocation="findServiceCivic.xsd"/>
+  <xs:element name="civicAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:country"/>
+        <xs:element ref="ns1:A1"/>
+        <xs:element ref="ns1:A3"/>
+        <xs:element ref="ns1:A6"/>
+        <xs:element ref="ns1:HNO"/>
+        <xs:element ref="ns1:PC"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="country" type="xs:NCName"/>
+  <xs:element name="A1" type="xs:NCName"/>
+  <xs:element name="A3" type="xs:NCName"/>
+  <xs:element name="A6" type="xs:NCName"/>
+  <xs:element name="HNO" type="xs:integer"/>
+  <xs:element name="PC" type="xs:integer"/>
+</xs:schema>

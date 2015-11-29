@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/gml" xmlns:p2="http://www.opengis.net/gml" xmlns:ns1="urn:ietf:params:xml:ns:lost1">
-  <xs:import namespace="urn:ietf:params:xml:ns:lost1" schemaLocation="findServiceGeodetic.xsd"/>
-  <xs:element name="Point">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="p2:pos"/>
-      </xs:sequence>
-      <xs:attribute name="srsName" use="required" type="xs:NMTOKEN"/>
-    </xs:complexType>
-  </xs:element>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/gml" xmlns:p2="http://www.opengis.net/gml">
+  <xs:element name="Point" type="p2:PointType"/>
+  <xs:complexType name="PointType">
+    <xs:sequence>
+      <xs:element ref="p2:pos"/>
+    </xs:sequence>
+    <xs:attribute name="srsName" use="required" type="xs:NMTOKEN"/>
+  </xs:complexType>
   <xs:element name="pos" type="xs:string"/>
 </xs:schema>

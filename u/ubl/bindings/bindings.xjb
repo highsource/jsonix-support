@@ -1,0 +1,102 @@
+<jaxb:bindings version="1.0" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" 
+	jaxb:extensionBindingPrefixes="xjc">
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/common/CCTS_CCT_SchemaModule-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="CCTS_CCT"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/common/UBL-CommonAggregateComponents-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="UBL_CAC"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/common/UBL-CommonBasicComponents-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="UBL_CBC"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/common/UBL-CommonExtensionComponents-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="UBL_CEC"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/common/UBL-CommonSignatureComponents-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="UBL_CSC"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/common/UBL-SignatureAggregateComponents-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="UBL_SAC"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/common/UBL-SignatureBasicComponents-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="UBL_SBC"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/common/UBL-UnqualifiedDataTypes-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="UBL_UDT"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/common/UBL-xmldsig-core-schema-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="UBL_DS"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/common/UBL-XAdESv132-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="UBL_XAdESv132"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/common/UBL-XAdESv141-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="UBL_XAdESv141"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="../schema/2.1/xsd/maindoc/UBL-Invoice-2.1.xsd" 
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="UBL_Invoice"/>
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+
+</jaxb:bindings>

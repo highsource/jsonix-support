@@ -1,4 +1,4 @@
 var Jsonix = require('jsonix').Jsonix;
-var Invoice = require('./generated-sources/jsonix/Invoice').Invoice;
+var Invoice = require('./mappings/Invoice').Invoice;
 
 new Jsonix.Context([Invoice]);

@@ -5,16 +5,16 @@ var XLink_1_0_Module_Factory = function () {
     defaultAttributeNamespaceURI: 'http:\/\/www.w3.org\/1999\/xlink',
     typeInfos: [{
         type: 'enumInfo',
+        localName: 'TypeType',
+        values: ['simple', 'extended', 'title', 'resource', 'locator', 'arc']
+      }, {
+        type: 'enumInfo',
         localName: 'ShowType',
         values: ['new', 'replace', 'embed', 'other', 'none']
       }, {
         type: 'enumInfo',
         localName: 'ActuateType',
         values: ['onLoad', 'onRequest', 'other', 'none']
-      }, {
-        type: 'enumInfo',
-        localName: 'TypeType',
-        values: ['simple', 'extended', 'title', 'resource', 'locator', 'arc']
       }],
     elementInfos: []
   };

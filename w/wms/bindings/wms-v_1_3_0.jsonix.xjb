@@ -15,10 +15,10 @@
 			</jsonix:mapping>
 		</jsonix:module>
 		<jsonix:mapping id="WMS_1_3_0" name="WMS_1_3_0" package="net.opengis.wms.v_1_3_0">
-			<jsonix:includes>
-				<!-- We'll only compile one and only one element at the moment -->
-				<jsonix:element name="wms:WMS_Capabilities" xmlns:wms="http://www.opengis.net/wms"/>
-			</jsonix:includes>
+			<!--jsonix:includes xmlns:wms="http://www.opengis.net/wms">
+				<jsonix:element name="wms:WMS_Capabilities"/>
+				<jsonix:element name="wms:Name"/>
+			</jsonix:includes-->
 		</jsonix:mapping>
 		<jsonix:mapping id="XLink_1_0" name="XLink_1_0" package="org.hisrc.w3c.xlink.v_1_0">
 			<jsonix:includes>

@@ -1,0 +1,21 @@
+{
+	"name": "jsonix-support-r-reqif",
+	"description": "Jsonix Example for WMS",
+	"version": "1.0.0",
+	"engines": [
+		"node >= 0.8.0"
+	],
+	"main": "jsonix-demos-wms.js",
+	"dependencies": {
+		"jsonix": ">=2.3.2",
+		"jsonix-schema-compiler": ">=2.3.7",
+		"ajv": ">=1.2.1"
+	},
+	"devDependencies" : {
+		"nodeunit" : "~0.x.x"
+	},
+	"scripts": {
+		"prepublish" : "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -generateJsonSchema -catalog schemas/catalog.cat -b bindings http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+		"test": "nodeunit tests/tests.js" 
+	}
+}

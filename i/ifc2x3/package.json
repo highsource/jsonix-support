@@ -1,0 +1,20 @@
+{
+	"name": "jsonix-support-ifc2x3",
+	"description": "Jsonix Support [ifc2x3]",
+	"version": "1.0.0",
+	"engines": [
+		"node >= 0.8.0"
+	],
+	"main": "index.js",
+	"dependencies": {
+		"jsonix": ">=2.3.0",
+		"jsonix-schema-compiler": ">=2.3.6"
+	},
+	"devDependencies" : {
+		"nodeunit" : "0.x.x"
+	},
+	"scripts": {
+		"test": "nodeunit tests/tests.js",
+		"prepublish" : "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -b bindings http://www.buildingsmart-tech.org/ifcXML/IFC2x3/FINAL/IFC2X3.xsd"
+	}
+}

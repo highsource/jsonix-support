@@ -1,0 +1,18 @@
+{
+  "name": "jsonix-example",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublish" : "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings mySchema.xsd -b bindings.xjb"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "npm": "3.10.3",
+    "node": "6.3.0"
+  },
+  "dependencies": {
+    "jsonix":"2.4.1"
+  }
+}

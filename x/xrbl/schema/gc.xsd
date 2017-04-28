@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.xbrl.org/uk/fr/gcd/2004-12-01" xmlns:pt="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:ae="http://www.companieshouse.gov.uk/ef/xbrl/uk/fr/gaap/ae/2009-06-21" xmlns:gc="http://www.xbrl.org/uk/fr/gcd/2004-12-01" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <xs:import namespace="http://www.companieshouse.gov.uk/ef/xbrl/uk/fr/gaap/ae/2009-06-21" schemaLocation="ae.xsd"/>
+  <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="xlink.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="xbrli.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="link.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01" schemaLocation="test-file.xsd"/>
+  <xs:element name="EntityNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="gc:EntityCurrentLegalName"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EntityCurrentLegalName">
+    <xs:complexType mixed="true">
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StatementDatesPeriodsCovered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="gc:BalanceSheetDate"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BalanceSheetDate">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:date">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.w3.org/1999/xlink" xmlns:pt="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:ae="http://www.companieshouse.gov.uk/ef/xbrl/uk/fr/gaap/ae/2009-06-21" xmlns:gc="http://www.xbrl.org/uk/fr/gcd/2004-12-01" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <xs:import namespace="http://www.companieshouse.gov.uk/ef/xbrl/uk/fr/gaap/ae/2009-06-21" schemaLocation="ae.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="xbrli.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="link.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01" schemaLocation="test-file.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/uk/fr/gcd/2004-12-01" schemaLocation="gc.xsd"/>
+  <xs:attribute name="arcrole" type="xs:anyURI"/>
+  <xs:attribute name="href" type="xs:anyURI"/>
+  <xs:attribute name="type" type="xs:NCName"/>
+</xs:schema>

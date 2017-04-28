@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.xbrl.org/2003/instance" xmlns:pt="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:ae="http://www.companieshouse.gov.uk/ef/xbrl/uk/fr/gaap/ae/2009-06-21" xmlns:gc="http://www.xbrl.org/uk/fr/gcd/2004-12-01" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <xs:import namespace="http://www.companieshouse.gov.uk/ef/xbrl/uk/fr/gaap/ae/2009-06-21" schemaLocation="ae.xsd"/>
+  <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="xlink.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="link.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01" schemaLocation="test-file.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/uk/fr/gcd/2004-12-01" schemaLocation="gc.xsd"/>
+  <xs:element name="xbrl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="link:schemaRef"/>
+        <xs:element ref="ae:CompanyNotDormant"/>
+        <xs:element ref="gc:EntityNames"/>
+        <xs:element ref="ae:CompanyIdentifyingNumbers"/>
+        <xs:element ref="gc:StatementDatesPeriodsCovered"/>
+        <xs:element maxOccurs="unbounded" ref="pt:ProfitLossAccountReserve"/>
+        <xs:element maxOccurs="unbounded" ref="pt:ShareholderFunds"/>
+        <xs:element maxOccurs="unbounded" ref="pt:CalledUpShareCapital"/>
+        <xs:element maxOccurs="unbounded" ref="pt:OtherAggregateReserves"/>
+        <xs:element maxOccurs="unbounded" ref="pt:NetAssetsLiabilitiesIncludingPensionAssetLiability"/>
+        <xs:element maxOccurs="unbounded" ref="pt:ProvisionsForLiabilitiesCharges"/>
+        <xs:element maxOccurs="unbounded" ref="pt:CreditorsDueAfterOneYearTotalNoncurrentLiabilities"/>
+        <xs:element maxOccurs="unbounded" ref="pt:TotalAssetsLessCurrentLiabilities"/>
+        <xs:element maxOccurs="unbounded" ref="pt:NetCurrentAssetsLiabilities"/>
+        <xs:element maxOccurs="unbounded" ref="pt:CreditorsDueWithinOneYearTotalCurrentLiabilities"/>
+        <xs:element maxOccurs="unbounded" ref="pt:CurrentAssets"/>
+        <xs:element maxOccurs="unbounded" ref="pt:Debtors"/>
+        <xs:element maxOccurs="unbounded" ref="pt:StocksInventory"/>
+        <xs:element maxOccurs="unbounded" ref="pt:CashBankInHand"/>
+        <xs:element maxOccurs="unbounded" ref="pt:FixedAssets"/>
+        <xs:element maxOccurs="unbounded" ref="pt:TangibleFixedAssets"/>
+        <xs:element maxOccurs="unbounded" ref="ae:AccountingPolicy"/>
+        <xs:element maxOccurs="unbounded" ref="ae:DepreciationRate"/>
+        <xs:element ref="ae:ForeignExchangeRate"/>
+        <xs:element ref="ae:IntangibleAssetsFreeTextNote"/>
+        <xs:element maxOccurs="unbounded" ref="pt:TangibleFixedAssetsCostOrValuation"/>
+        <xs:element ref="pt:TangibleFixedAssetsAdditions"/>
+        <xs:element maxOccurs="unbounded" ref="pt:TangibleFixedAssetsDepreciation"/>
+        <xs:element ref="pt:TangibleFixedAssetsDepreciationChargeForPeriod"/>
+        <xs:element ref="ae:TangibleAssetsFreeTextNote"/>
+        <xs:element ref="ae:InvestmentsFixedAssetsFreeTextNote"/>
+        <xs:element maxOccurs="unbounded" ref="ae:TotalFixedAssetsCostOrValuation"/>
+        <xs:element ref="ae:TotalFixedAssetsAdditions"/>
+        <xs:element maxOccurs="unbounded" ref="ae:TotalFixedAssetsDepreciation"/>
+        <xs:element ref="ae:TotalFixedAssetsDepreciationChargeInPeriod"/>
+        <xs:element ref="ae:TotalFixedAssetsFreeTextNote"/>
+        <xs:element maxOccurs="unbounded" ref="ae:SecuredDebts"/>
+        <xs:element ref="ae:CreditorsDueAfterOneYearFreeTextNote"/>
+        <xs:element maxOccurs="unbounded" ref="pt:EquityAuthorisedDetails"/>
+        <xs:element maxOccurs="unbounded" ref="pt:DetailsOrdinarySharesAllotted"/>
+        <xs:element ref="ae:ShareCapitalFreeTextNote"/>
+        <xs:element ref="pt:DateApproval"/>
+        <xs:element ref="pt:ApprovalDetails"/>
+        <xs:element ref="ae:CompanyEntitledToExemptionUnderSection477CompaniesAct2006"/>
+        <xs:element ref="ae:MembersHaveNotRequiredCompanyToObtainAnAudit"/>
+        <xs:element ref="ae:DirectorsAcknowledgeTheirResponsibilitiesUnderCompaniesAct"/>
+        <xs:element ref="ae:AccountsAreInAccordanceWithSpecialProvisionsCompaniesActRelatingToSmallCompanies"/>
+        <xs:element maxOccurs="unbounded" ref="xbrli:unit"/>
+        <xs:element maxOccurs="unbounded" ref="xbrli:context"/>
+        <xs:element ref="ae:CompaniesHouseDocumentAuthentication"/>
+        <xs:element ref="ae:DateAccountsReceived"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xbrli:measure"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="measure" type="xs:NMTOKEN"/>
+  <xs:element name="context">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xbrli:entity"/>
+        <xs:element ref="xbrli:period"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="entity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xbrli:identifier"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="identifier">
+    <xs:complexType mixed="true">
+      <xs:attribute name="scheme" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="period">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="xbrli:instant"/>
+        <xs:sequence>
+          <xs:element ref="xbrli:startDate"/>
+          <xs:element ref="xbrli:endDate"/>
+        </xs:sequence>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="instant" type="xs:date"/>
+  <xs:element name="startDate" type="xs:date"/>
+  <xs:element name="endDate" type="xs:date"/>
+</xs:schema>

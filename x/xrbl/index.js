@@ -18,5 +18,6 @@ var context = new Jsonix.Context([ MySchema ],{
 var unmarshaller = context.createUnmarshaller();
 
 unmarshaller.unmarshalFile('test-file-1.xml', function(myElement) {
+	console.log(JSON.stringify(myElement, null, 2));
 	
 });

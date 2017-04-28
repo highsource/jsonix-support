@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.companieshouse.gov.uk/ef/xbrl/uk/fr/gaap/ae/2009-06-21" xmlns:pt="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:ae="http://www.companieshouse.gov.uk/ef/xbrl/uk/fr/gaap/ae/2009-06-21" xmlns:gc="http://www.xbrl.org/uk/fr/gcd/2004-12-01" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="xlink.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="xbrli.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="link.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01" schemaLocation="test-file.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/uk/fr/gcd/2004-12-01" schemaLocation="gc.xsd"/>
+  <xs:element name="CompanyNotDormant">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:boolean">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyIdentifyingNumbers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ae:CompaniesHouseRegisteredNumber"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompaniesHouseRegisteredNumber">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountingPolicy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ae:TitleAccountingPolicy"/>
+        <xs:element ref="ae:ContentAccountingPolicy"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TitleAccountingPolicy">
+    <xs:complexType mixed="true">
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContentAccountingPolicy">
+    <xs:complexType mixed="true">
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DepreciationRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ae:CategoryItem"/>
+        <xs:element ref="ae:TypeDepreciation"/>
+        <xs:element ref="ae:RateDepreciation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CategoryItem">
+    <xs:complexType mixed="true">
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TypeDepreciation">
+    <xs:complexType mixed="true">
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RateDepreciation">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+          <xs:attribute name="precision" use="required" type="xs:integer"/>
+          <xs:attribute name="unitRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForeignExchangeRate">
+    <xs:complexType mixed="true">
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IntangibleAssetsFreeTextNote">
+    <xs:complexType>
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TangibleAssetsFreeTextNote">
+    <xs:complexType>
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvestmentsFixedAssetsFreeTextNote">
+    <xs:complexType>
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalFixedAssetsCostOrValuation">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+          <xs:attribute name="precision" use="required" type="xs:integer"/>
+          <xs:attribute name="unitRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalFixedAssetsAdditions">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+          <xs:attribute name="precision" use="required" type="xs:integer"/>
+          <xs:attribute name="unitRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalFixedAssetsDepreciation">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+          <xs:attribute name="precision" use="required" type="xs:integer"/>
+          <xs:attribute name="unitRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalFixedAssetsDepreciationChargeInPeriod">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+          <xs:attribute name="precision" use="required" type="xs:integer"/>
+          <xs:attribute name="unitRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalFixedAssetsFreeTextNote">
+    <xs:complexType>
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SecuredDebts">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+          <xs:attribute name="precision" use="required" type="xs:integer"/>
+          <xs:attribute name="unitRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreditorsDueAfterOneYearFreeTextNote">
+    <xs:complexType>
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShareCapitalFreeTextNote">
+    <xs:complexType>
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyEntitledToExemptionUnderSection477CompaniesAct2006">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:boolean">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MembersHaveNotRequiredCompanyToObtainAnAudit">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:boolean">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DirectorsAcknowledgeTheirResponsibilitiesUnderCompaniesAct">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:boolean">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountsAreInAccordanceWithSpecialProvisionsCompaniesActRelatingToSmallCompanies">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:boolean">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompaniesHouseDocumentAuthentication">
+    <xs:complexType>
+      <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DateAccountsReceived">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:date">
+          <xs:attribute name="contextRef" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,19 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "circular-json": "^0.3.1",
+    "jsonix": "^2.4.1",
+    "jsonix-schema-compiler": "^2.3.9",
+    "ws.js": "^2.0.22",
+    "xml2json": "^0.11.0"
+  },
+  "scripts": {
+    "getFuelStationsResponse": "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p getFuelStationsResponse models/getFuelStationsResponse.xsd",
+    "preenvelope": "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p envelope models/envelope.xsd",
+    "prepubl": "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p schema models/schema.xsd",
+    "prepublish": "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p FuelStation models/FuelStation.xsd",
+    "prepublish1": "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p FuelPrice models/FuelPrice.xsd"
+  },
+  "private": true
+}

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="http://schemas.mobility-media.com/wsdl/fuelprice/v1/model" xmlns:tns="http://schemas.mobility-media.com/wsdl/fuelprice/v1/model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+  <xs:complexType name="SearchResult">
+    <xs:sequence>
+      <xs:element name="fuelStation" type="tns:FuelStation"/>
+      <xs:element name="prices" type="tns:FuelPriceSet" minOccurs="0"/>
+      <xs:element name="distance" type="xs:float" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="FuelStation">
     <xs:sequence>
       <xs:element name="location" type="tns:GeoLocation"/>
@@ -145,6 +153,32 @@
     <xs:sequence/>
     <xs:attribute name="code" type="xs:string" use="required"/>
     <xs:attribute name="timezone" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="FuelPriceSet">
+    <xs:sequence>
+      <xs:element name="price" type="tns:FuelPrice" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="stationId" type="xs:long" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="FuelPrice">
+    <xs:sequence>
+      <xs:element name="price" type="tns:Price"/>
+      <xs:element name="validFrom" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="lastUpdate" type="xs:dateTime"/>
+    </xs:sequence>
+    <xs:attribute name="stationId" type="xs:long" use="required"/>
+    <xs:attribute name="provider" type="xs:string" use="required"/>
+    <xs:attribute name="fuelType" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Price">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="currency" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
   </xs:complexType>
 </xs:schema>
 

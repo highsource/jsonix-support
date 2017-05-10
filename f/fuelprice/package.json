@@ -10,10 +10,7 @@
   },
   "scripts": {
     "getFuelStationsResponse": "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p getFuelStationsResponse models/getFuelStationsResponse.xsd",
-    "preenvelope": "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p envelope models/envelope.xsd",
-    "prepubl": "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p schema models/schema.xsd",
-    "prepublish": "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p FuelStation models/FuelStation.xsd",
-    "prepublish1": "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p FuelPrice models/FuelPrice.xsd"
+    "envelope": "java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p envelope models/envelope.xsd"
   },
   "private": true
 }

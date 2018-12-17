@@ -56,7 +56,7 @@ ws.send(handlers, ctx, function (ctx) {
     // Unmarshal the XML file
     const unmarshalled = unmarshaller.unmarshalString(ctx.response);
     //console.log(unMarshall.value.body.any[0].childNodes[0].childNodes[0]);//FuelStation
-    console.log(unmarshalled.value.body.any[0].childNodes[0].childNodes[1].childNodes);//prices
+    //console.log(unmarshalled.value.body.any[0].childNodes[0].childNodes[1].childNodes);//prices
     //console.dir(unMarshall.value, { depth: null });
     /*function (myElement) {
      console.log(myElement);
@@ -64,5 +64,5 @@ ws.send(handlers, ctx, function (ctx) {
      });*/
 
 
-    console.log(CircularJSON.stringify(unmarshalled));
+    console.log(JSON.stringify(unmarshalled.value.body.any[0].value.entry[0]));
 });

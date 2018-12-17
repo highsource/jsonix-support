@@ -3,6 +3,29 @@ var getFuelStationsResponse_Module_Factory = function () {
     name: 'getFuelStationsResponse',
     defaultElementNamespaceURI: 'http:\/\/schemas.mobility-media.com\/wsdl\/fuelprice\/v1\/model',
     typeInfos: [{
+        localName: 'Time',
+        propertyInfos: [{
+            name: 'hours',
+            required: true,
+            typeInfo: 'Int',
+            attributeName: {
+              localPart: 'hours'
+            },
+            type: 'attribute'
+          }, {
+            name: 'minutes',
+            required: true,
+            typeInfo: 'Int',
+            attributeName: {
+              localPart: 'minutes'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'OpeningHoursDay.Interval',
+        typeName: null,
+        baseTypeInfo: '.TimeInterval'
+      }, {
         localName: 'Price',
         propertyInfos: [{
             name: 'value',
@@ -13,41 +36,6 @@ var getFuelStationsResponse_Module_Factory = function () {
             required: true,
             attributeName: {
               localPart: 'currency'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'Brand',
-        propertyInfos: [{
-            name: 'key',
-            required: true,
-            attributeName: {
-              localPart: 'key'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'OpeningHours',
-        propertyInfos: [{
-            name: '_default',
-            required: true,
-            elementName: 'default',
-            typeInfo: '.OpeningHours.Default'
-          }, {
-            name: 'exceptions',
-            required: true,
-            typeInfo: '.OpeningHours.Exceptions'
-          }]
-      }, {
-        localName: 'OpeningHours.Exceptions.ExceptionItem',
-        typeName: null,
-        baseTypeInfo: '.OpeningHoursDay',
-        propertyInfos: [{
-            name: 'date',
-            required: true,
-            typeInfo: 'Date',
-            attributeName: {
-              localPart: 'date'
             },
             type: 'attribute'
           }]
@@ -88,198 +76,6 @@ var getFuelStationsResponse_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'OpeningHours.Default',
-        typeName: null,
-        propertyInfos: [{
-            name: 'item',
-            minOccurs: 0,
-            collection: true,
-            elementName: {
-              localPart: 'item'
-            },
-            typeInfo: '.OpeningHours.Default.Item'
-          }]
-      }, {
-        localName: 'FuelStation.FuelCards',
-        typeName: null,
-        propertyInfos: [{
-            name: 'fuelCard',
-            minOccurs: 0,
-            collection: true,
-            elementName: {
-              localPart: 'fuelCard'
-            },
-            typeInfo: '.FuelCard'
-          }]
-      }, {
-        localName: 'TimeInterval',
-        propertyInfos: [{
-            name: 'start',
-            required: true,
-            typeInfo: '.Time'
-          }, {
-            name: 'end',
-            required: true,
-            typeInfo: '.Time'
-          }, {
-            name: 'orderNum',
-            required: true,
-            typeInfo: 'Int'
-          }]
-      }, {
-        localName: 'SearchResult',
-        propertyInfos: [{
-            name: 'fuelStation',
-            required: true,
-            typeInfo: '.FuelStation'
-          }, {
-            name: 'prices',
-            typeInfo: '.FuelPriceSet'
-          }, {
-            name: 'distance',
-            typeInfo: 'Float'
-          }]
-      }, {
-        localName: 'OpeningHours.Exceptions',
-        typeName: null,
-        propertyInfos: [{
-            name: 'exceptionItem',
-            minOccurs: 0,
-            collection: true,
-            elementName: {
-              localPart: 'exceptionItem'
-            },
-            typeInfo: '.OpeningHours.Exceptions.ExceptionItem'
-          }]
-      }, {
-        localName: 'FuelStation.PaymentMethods',
-        typeName: null,
-        propertyInfos: [{
-            name: 'paymentMethod',
-            minOccurs: 0,
-            collection: true,
-            elementName: {
-              localPart: 'paymentMethod'
-            },
-            typeInfo: '.PaymentMethod'
-          }]
-      }, {
-        localName: 'GeoLocation',
-        propertyInfos: [{
-            name: 'latitude',
-            required: true,
-            typeInfo: 'Double'
-          }, {
-            name: 'longitude',
-            required: true,
-            typeInfo: 'Double'
-          }, {
-            name: 'ellipsoid',
-            required: true,
-            attributeName: {
-              localPart: 'ellipsoid'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'Service',
-        propertyInfos: [{
-            name: 'key',
-            required: true,
-            attributeName: {
-              localPart: 'key'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'Time',
-        propertyInfos: [{
-            name: 'hours',
-            required: true,
-            typeInfo: 'Int',
-            attributeName: {
-              localPart: 'hours'
-            },
-            type: 'attribute'
-          }, {
-            name: 'minutes',
-            required: true,
-            typeInfo: 'Int',
-            attributeName: {
-              localPart: 'minutes'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'OpeningHoursDay.Interval',
-        typeName: null,
-        baseTypeInfo: '.TimeInterval'
-      }, {
-        localName: 'OpeningHoursDay',
-        propertyInfos: [{
-            name: 'interval',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.OpeningHoursDay.Interval'
-          }]
-      }, {
-        localName: 'Country',
-        propertyInfos: [{
-            name: 'code',
-            required: true,
-            attributeName: {
-              localPart: 'code'
-            },
-            type: 'attribute'
-          }, {
-            name: 'timezone',
-            attributeName: {
-              localPart: 'timezone'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'FuelStation.Services',
-        typeName: null,
-        propertyInfos: [{
-            name: 'service',
-            minOccurs: 0,
-            collection: true,
-            elementName: {
-              localPart: 'service'
-            },
-            typeInfo: '.Service'
-          }]
-      }, {
-        localName: 'OpeningHours.Default.Item',
-        typeName: null,
-        baseTypeInfo: '.OpeningHoursDay',
-        propertyInfos: [{
-            name: 'day',
-            required: true,
-            typeInfo: 'Int',
-            attributeName: {
-              localPart: 'day'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'FuelPriceSet',
-        propertyInfos: [{
-            name: 'price',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.FuelPrice'
-          }, {
-            name: 'stationId',
-            required: true,
-            typeInfo: 'Long',
-            attributeName: {
-              localPart: 'stationId'
-            },
-            type: 'attribute'
-          }]
-      }, {
         localName: 'Address',
         propertyInfos: [{
             name: 'line1',
@@ -300,14 +96,16 @@ var getFuelStationsResponse_Module_Factory = function () {
             name: 'stateRegion'
           }]
       }, {
-        localName: 'PaymentMethod',
+        localName: 'FuelStation.FuelCards',
+        typeName: null,
         propertyInfos: [{
-            name: 'key',
-            required: true,
-            attributeName: {
-              localPart: 'key'
+            name: 'fuelCard',
+            minOccurs: 0,
+            collection: true,
+            elementName: {
+              localPart: 'fuelCard'
             },
-            type: 'attribute'
+            typeInfo: '.FuelCard'
           }]
       }, {
         localName: 'FuelCard',
@@ -375,8 +173,229 @@ var getFuelStationsResponse_Module_Factory = function () {
             },
             type: 'attribute'
           }]
+      }, {
+        localName: 'FuelPriceSet',
+        propertyInfos: [{
+            name: 'price',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.FuelPrice'
+          }, {
+            name: 'stationId',
+            required: true,
+            typeInfo: 'Long',
+            attributeName: {
+              localPart: 'stationId'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'OpeningHours.Default',
+        typeName: null,
+        propertyInfos: [{
+            name: 'item',
+            minOccurs: 0,
+            collection: true,
+            elementName: {
+              localPart: 'item'
+            },
+            typeInfo: '.OpeningHours.Default.Item'
+          }]
+      }, {
+        localName: 'OpeningHours.Default.Item',
+        typeName: null,
+        baseTypeInfo: '.OpeningHoursDay',
+        propertyInfos: [{
+            name: 'day',
+            required: true,
+            typeInfo: 'Int',
+            attributeName: {
+              localPart: 'day'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'OpeningHours.Exceptions',
+        typeName: null,
+        propertyInfos: [{
+            name: 'exceptionItem',
+            minOccurs: 0,
+            collection: true,
+            elementName: {
+              localPart: 'exceptionItem'
+            },
+            typeInfo: '.OpeningHours.Exceptions.ExceptionItem'
+          }]
+      }, {
+        localName: 'GeoLocation',
+        propertyInfos: [{
+            name: 'latitude',
+            required: true,
+            typeInfo: 'Double'
+          }, {
+            name: 'longitude',
+            required: true,
+            typeInfo: 'Double'
+          }, {
+            name: 'ellipsoid',
+            required: true,
+            attributeName: {
+              localPart: 'ellipsoid'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'OpeningHoursDay',
+        propertyInfos: [{
+            name: 'interval',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.OpeningHoursDay.Interval'
+          }]
+      }, {
+        localName: 'OpeningHours.Exceptions.ExceptionItem',
+        typeName: null,
+        baseTypeInfo: '.OpeningHoursDay',
+        propertyInfos: [{
+            name: 'date',
+            required: true,
+            typeInfo: 'Date',
+            attributeName: {
+              localPart: 'date'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'PaymentMethod',
+        propertyInfos: [{
+            name: 'key',
+            required: true,
+            attributeName: {
+              localPart: 'key'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'Country',
+        propertyInfos: [{
+            name: 'code',
+            required: true,
+            attributeName: {
+              localPart: 'code'
+            },
+            type: 'attribute'
+          }, {
+            name: 'timezone',
+            attributeName: {
+              localPart: 'timezone'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'FuelStation.Services',
+        typeName: null,
+        propertyInfos: [{
+            name: 'service',
+            minOccurs: 0,
+            collection: true,
+            elementName: {
+              localPart: 'service'
+            },
+            typeInfo: '.Service'
+          }]
+      }, {
+        localName: 'OpeningHours',
+        propertyInfos: [{
+            name: '_default',
+            required: true,
+            elementName: 'default',
+            typeInfo: '.OpeningHours.Default'
+          }, {
+            name: 'exceptions',
+            required: true,
+            typeInfo: '.OpeningHours.Exceptions'
+          }]
+      }, {
+        localName: 'SearchResult',
+        propertyInfos: [{
+            name: 'fuelStation',
+            required: true,
+            typeInfo: '.FuelStation'
+          }, {
+            name: 'prices',
+            typeInfo: '.FuelPriceSet'
+          }, {
+            name: 'distance',
+            typeInfo: 'Float'
+          }]
+      }, {
+        localName: 'Service',
+        propertyInfos: [{
+            name: 'key',
+            required: true,
+            attributeName: {
+              localPart: 'key'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'TimeInterval',
+        propertyInfos: [{
+            name: 'start',
+            required: true,
+            typeInfo: '.Time'
+          }, {
+            name: 'end',
+            required: true,
+            typeInfo: '.Time'
+          }, {
+            name: 'orderNum',
+            required: true,
+            typeInfo: 'Int'
+          }]
+      }, {
+        localName: 'Brand',
+        propertyInfos: [{
+            name: 'key',
+            required: true,
+            attributeName: {
+              localPart: 'key'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'GetFuelStationsResponse',
+        typeName: null,
+        propertyInfos: [{
+            name: 'entry',
+            required: true,
+            collection: true,
+            elementName: {
+              localPart: 'entry',
+              namespaceURI: 'http:\/\/schemas.mobility-media.com\/wsdl\/fuelprice\/v1'
+            },
+            typeInfo: '.SearchResult'
+          }]
+      }, {
+        localName: 'FuelStation.PaymentMethods',
+        typeName: null,
+        propertyInfos: [{
+            name: 'paymentMethod',
+            minOccurs: 0,
+            collection: true,
+            elementName: {
+              localPart: 'paymentMethod'
+            },
+            typeInfo: '.PaymentMethod'
+          }]
       }],
-    elementInfos: []
+    elementInfos: [{
+        typeInfo: '.GetFuelStationsResponse',
+        elementName: {
+          localPart: 'GetFuelStationsResponse',
+          namespaceURI: 'http:\/\/schemas.mobility-media.com\/wsdl\/fuelprice\/v1'
+        }
+      }]
   };
   return {
     getFuelStationsResponse: getFuelStationsResponse

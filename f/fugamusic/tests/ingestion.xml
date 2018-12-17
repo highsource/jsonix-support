@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ingestion xsi:noNamespaceSchemaLocation="http://fugamusic.com/docs/ingestion/ingestion.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <action>INSERT</action>
+  <album>
+    <album_notes>Music by: Heath Whitelock
+  http://www.heathwhitelock.com/</album_notes>
+    <supplier>Armada</supplier>
+    <c_line_text>Copyright</c_line_text>
+    <c_line_year>2008</c_line_year>
+    <catalog_number>LABELONE1</catalog_number>
+    <catalog_tier>FRONT</catalog_tier>
+    <cover_art>
+      <image>
+        <file>
+          <name>1234567890136.jpg</name>
+          <crc32_checksum>3715643725</crc32_checksum>
+          <size>359375</size>
+        </file>
+      </image>
+    </cover_art>
+    <consumer_release_date>2006-01-01</consumer_release_date>
+    <main_genre>Rock</main_genre>
+    <alternate_subgenre>Boogie</alternate_subgenre>
+    <main_subgenre>Boogie</main_subgenre>
+    <label>Cortez Records</label>
+    <language>IT</language>
+    <name>Peace, Love, Death Metal</name>
+    <p_line_text>Copyright</p_line_text>
+    <p_line_year>2009</p_line_year>
+    <parental_advisory>false</parental_advisory>
+    <pricings>
+      <pricing>
+        <organization>
+          <name>Amazon</name>
+        </organization>
+        <territory>DE</territory>
+        <tier>FRONTLINE</tier>
+        <price>9.99</price>
+      </pricing>
+    </pricings>
+    <pricing_intervals>
+      <pricing_interval>
+        <organization>
+          <name>Clubload</name>
+        </organization>
+        <territory>WORLD</territory>
+        <tier>Mini EP</tier>
+        <start_date>2013-04-04</start_date>
+      </pricing_interval>
+    </pricing_intervals>
+    <primary_artist>
+      <biography>After the Eagles of Death Metal first album was crowned the greatest boogie record of all time by rockers worldwide, no one knew just how the hell they could top it. But what were they thinking? The dream boys always bring da neck-licking, boot-scooting, soul-scratching, ass-shaking party tunes that never disappoint. This &amp; that.</biography>
+      <name>Eagles of Death Metal</name>
+      <website>http://www.Eagles-of-Death-Metal.com</website>
+      <artist_identifiers>
+        <artist_identifier>
+          <identifier>1234</identifier>
+          <issuing_organization>iTunes</issuing_organization>
+        </artist_identifier>
+        <artist_identifier>
+          <identifier>5678</identifier>
+          <issuing_organization>Spotify</issuing_organization>
+        </artist_identifier>
+      </artist_identifiers>
+    </primary_artist>
+    <additional_artists>
+      <artist>
+        <name>Vultures of Death Metal</name>
+        <website>http://www.Vultures-of-Death-Metal.com</website>
+        <primary_artist>true</primary_artist>
+        <artist_identifiers>
+          <artist_identifier>
+            <identifier>9286492</identifier>
+            <issuing_organization>iTunes</issuing_organization>
+          </artist_identifier>
+          <artist_identifier>
+            <identifier>9878388</identifier>
+            <issuing_organization>Spotify</issuing_organization>
+          </artist_identifier>
+        </artist_identifiers>
+      </artist>
+      <artist>
+        <name>Mega Mondo</name>
+        <website>http://www.mega-mondo.com</website>
+        <primary_artist>false</primary_artist>
+        <artist_identifiers>
+          <artist_identifier>
+            <identifier>898363</identifier>
+            <issuing_organization>iTunes</issuing_organization>
+          </artist_identifier>
+          <artist_identifier>
+            <identifier>2986</identifier>
+            <issuing_organization>Spotify</issuing_organization>
+          </artist_identifier>
+        </artist_identifiers>
+      </artist>
+    </additional_artists>
+    <recording_year>2004</recording_year>
+    <recording_location>Palm Springs, California</recording_location>
+    <release_format_type>ALBUM</release_format_type>
+    <total_discs>1</total_discs>
+    <territories>
+      <territory>DZ</territory>
+      <territory>AO</territory>
+      <territory>GB</territory>
+    </territories>
+    <translations>
+      <translation field_name="name" lang="RU">Russian name</translation>
+      <translation field_name="version" lang="RU">Russian version</translation>
+    </translations>
+    <tracks>
+      <track>
+        <allow_preorder_preview>false</allow_preorder_preview>
+        <main_genre>Rock</main_genre>
+        <alternate_subgenre>Boogie</alternate_subgenre>
+        <main_subgenre>Boogie</main_subgenre>
+        <available_separately>false</available_separately>
+        <contributors>
+          <contributor>
+            <name>Joshua Homme</name>
+            <role>Arranger</role>
+          </contributor>
+          <contributor>
+            <name>Scout Niblett</name>
+            <role>Arranger</role>
+          </contributor>
+        </contributors>
+        <p_line_text>Copyright</p_line_text>
+        <p_line_year>2009</p_line_year>
+        <catalog_tier>FRONT</catalog_tier>
+        <resources>
+          <audio>
+            <file>
+              <name>1234567890136_1_01.wav</name>
+              <crc32_checksum>4017732434</crc32_checksum>
+              <size>3889280</size>
+            </file>
+          </audio>
+        </resources>
+        <isrc_code>NLFUG0710000</isrc_code>
+        <language>EN</language>
+        <audio_locale>EN</audio_locale>
+        <lyrics>I'm gon' set my soul on fire. My heart beats low while the flames go higher. Strike the match and then the truth is told.</lyrics>
+        <name>Flames go Higher</name>
+        <on_disc>1</on_disc>
+        <preorder_type>STANDARD</preorder_type>
+        <parental_advisory>clean</parental_advisory>
+        <preview_length>30</preview_length>
+        <preview_start>10</preview_start>
+        <primary_artist>
+          <biography>After the Eagles of Death Metal first album was crowned the greatest boogie record of all time by rockers worldwide, no one knew just how the hell they could top it. But what were they thinking? The dream boys always bring da neck-licking, boot-scooting, soul-scratching, ass-shaking party tunes that never disappoint.</biography>
+          <name>Eagles of Death Metal</name>
+          <website>http://www.Eagles-of-Death-Metal.com</website>
+        </primary_artist>
+        <publishers>
+          <publisher>
+            <publisher_name>Sunshine Records</publisher_name>
+            <writer_name>Billy Johnson</writer_name>
+          </publisher>
+          <publisher>
+            <publisher_name>The Publishing House Ltd.</publisher_name>
+            <writer_name>Jesse Hughes</writer_name>
+          </publisher>
+        </publishers>
+        <recording_year>2004</recording_year>
+        <recording_location>Palm Springs, California</recording_location>
+        <sequence_number>1</sequence_number>
+        <track_notes>think about this</track_notes>
+        <track_version>track version</track_version>
+        <usage_rights>
+          <usage_right>
+            <rights>
+              <right>Subscription streaming</right>
+              <right>Ad supported streaming</right>
+              <right>Burn CD</right>
+            </rights>
+          </usage_right>
+          <usage_right>
+            <organization>
+              <name>Clubload</name>
+            </organization>
+            <rights>
+              <right>Subscription streaming</right>
+            </rights>
+          </usage_right>
+        </usage_rights>
+        <translations>
+          <translation field_name="name" lang="ES">Track name in spanish</translation>
+          <translation field_name="name" lang="FR">Track name in french</translation>
+          <translation field_name="version" lang="FR">Track version in french</translation>
+        </translations>
+      </track>
+      <track>
+        <main_genre>Rock</main_genre>
+        <alternate_subgenre>Boogie</alternate_subgenre>
+        <main_subgenre>Boogie</main_subgenre>
+        <available_separately>false</available_separately>
+        <contributors>
+          <contributor>
+            <name>Joshua Homme</name>
+            <role>Arranger</role>
+          </contributor>
+          <contributor>
+            <name>Scout Niblett</name>
+            <role>Arranger</role>
+          </contributor>
+        </contributors>
+        <resources>
+          <audio>
+            <file>
+              <name>1234567890136_1_02.wav</name>
+              <crc32_checksum>2380662033</crc32_checksum>
+              <size>3889280</size>
+            </file>
+          </audio>
+        </resources>
+        <isrc_code>NLFUG0710001</isrc_code>
+        <language>NL</language>
+        <audio_locale>NL</audio_locale>
+        <lyrics>Who'll love the devil? Who'll song his song? Who will love the devil and his song? I'll love the devil!</lyrics>
+        <name>Kiss the Devil</name>
+        <on_disc>1</on_disc>
+        <parental_advisory>false</parental_advisory>
+        <preview_length>30</preview_length>
+        <preview_start>10</preview_start>
+        <primary_artist>
+          <biography>After the Eagles of Death Metal first album was crowned the greatest boogie record of all time by rockers worldwide, no one knew just how the hell they could top it. But what were they thinking? The dream boys always bring da neck-licking, boot-scooting, soul-scratching, ass-shaking party tunes that never disappoint.</biography>
+          <name>Eagles of Death Metal</name>
+          <website>http://www.Eagles-of-Death-Metal.com</website>
+        </primary_artist>
+        <publishers>
+          <publisher>
+            <publisher_name>The Publishing House Ltd.</publisher_name>
+            <writer_name>Jesse Hughes</writer_name>
+          </publisher>
+        </publishers>
+        <recording_year>2004</recording_year>
+        <recording_location>Palm Springs, California</recording_location>
+        <sequence_number>2</sequence_number>
+        <track_notes>think about this</track_notes>
+        <track_version></track_version>
+      </track>
+      <classical_track>
+        <alternate_subgenre>Boogie</alternate_subgenre>
+        <main_subgenre>Boogie</main_subgenre>
+        <available_separately>false</available_separately>
+        <contributors>
+          <contributor>
+            <name>Joshua Homme</name>
+            <role>Arranger</role>
+          </contributor>
+          <contributor>
+            <name>Scout Niblett</name>
+            <role>Arranger</role>
+          </contributor>
+        </contributors>
+        <resources>
+          <audio>
+            <file>
+              <name>1234567890136_1_02.wav</name>
+              <crc32_checksum>2380662033</crc32_checksum>
+              <size>3889280</size>
+            </file>
+          </audio>
+        </resources>
+        <isrc_code>NLFUG0710001</isrc_code>
+        <language>IT</language>
+        <audio_locale>IT</audio_locale>
+        <lyrics>Who'll love the devil? Who'll song his song? Who will love the devil and his song? I'll love the devil!</lyrics>
+        <movement>Meijer Movement I</movement>
+        <on_disc>1</on_disc>
+        <parental_advisory>false</parental_advisory>
+        <preview_length>30</preview_length>
+        <preview_start>10</preview_start>
+        <primary_artist>
+          <biography>After the Eagles of Death Metal first album was crowned the greatest boogie record of all time by rockers worldwide, no one knew just how the hell they could top it. But what were they thinking? The dream boys always bring da neck-licking, boot-scooting, soul-scratching, ass-shaking party tunes that never disappoint.</biography>
+          <name>Eagles of Death Metal</name>
+          <website>http://www.Eagles-of-Death-Metal.com</website>
+        </primary_artist>
+        <publishers>
+          <publisher>
+            <publisher_name>The Publishing House Ltd.</publisher_name>
+            <writer_name>Jesse Hughes</writer_name>
+          </publisher>
+        </publishers>
+        <recording_year>2004</recording_year>
+        <recording_location>Palm Springs, California</recording_location>
+        <sequence_number>3</sequence_number>
+        <track_notes>think about this</track_notes>
+        <track_version></track_version>
+        <work>
+          <name>Metal Sonata in C#</name>
+        </work>
+        <classical_catalog></classical_catalog>
+        <key>A_MAJOR</key>
+        <always_send_display_title>true</always_send_display_title>
+      </classical_track>
+        <video>
+            <name>Kiss the Devil Music Video</name>
+            <isrc_code>NLFUG0710002</isrc_code>
+            <main_genre>Rock</main_genre>
+            <primary_artist>
+                <biography>After the Eagles of Death Metal first album was crowned the greatest boogie record of all time by rockers worldwide, no one knew just how the hell they could top it. But what were they thinking? The dream boys always bring da neck-licking, boot-scooting, soul-scratching, ass-shaking party tunes that never disappoint. This &amp; that.</biography>
+                <name>Eagles of Death Metal</name>
+                <website>http://www.Eagles-of-Death-Metal.com</website>
+            </primary_artist>
+            <additional_artists>
+                <artist>
+                    <name>Vultures of Death Metal</name>
+                    <website>http://www.Vultures-of-Death-Metal.com</website>
+                    <primary_artist>true</primary_artist>
+                </artist>
+                <artist>
+                    <name>Mega Mondo</name>
+                    <website>http://www.mega-mondo.com</website>
+                    <primary_artist>false</primary_artist>
+                </artist>
+            </additional_artists>
+            <contributors>
+                <contributor>
+                    <name>Joshua Homme</name>
+                    <role>Arranger</role>
+                </contributor>
+            </contributors>
+            <publishers>
+                <publisher>
+                    <publisher_name>Sunshine Records</publisher_name>
+                    <writer_name>Billy Johnson</writer_name>
+                </publisher>
+            </publishers>
+            <sequence_number>4</sequence_number>
+            <audio_locale>NL</audio_locale>
+            <video_version>Director's cut</video_version>
+            <catalog_tier>FRONT</catalog_tier>
+            <on_disc>1</on_disc>
+            <available_separately>false</available_separately>
+            <parental_advisory>false</parental_advisory>
+            <preview_length>30</preview_length>
+            <preview_start>10</preview_start>
+            <preorder_type>STANDARD</preorder_type>
+            <allow_preorder_preview>false</allow_preorder_preview>
+            <recording_year>2015</recording_year>
+            <recording_location>Palm Springs, California</recording_location>
+            <resources>
+                <video>
+                    <file>
+                        <name>1234567890136_04.m4v</name>
+                        <crc32_checksum>238432432</crc32_checksum>
+                        <size>42332423</size>
+                    </file>
+                </video>
+                <video_preview_image>
+                    <file>
+                        <name>1234567890136_04.jpg</name>
+                        <crc32_checksum>3715643725</crc32_checksum>
+                        <size>359375</size>
+                    </file>
+                </video_preview_image>
+            </resources>
+            <submit_itunes_video_encoding>true</submit_itunes_video_encoding>
+        </video>
+    </tracks>
+    <upc_code>1234567890136</upc_code>
+    <schedule>
+      <consumer_release_date>2011-06-03</consumer_release_date>
+      <deliver_by_default>true</deliver_by_default>
+      <activate>true</activate>
+      <deliveries>
+        <delivery>
+          <organization><id>300</id></organization>
+        </delivery>
+        <delivery>
+          <organization><name>Clubload</name></organization>
+          <lead_time>ONE_WEEK</lead_time>
+          <consumer_release_date>2011-06-06</consumer_release_date>
+        </delivery>
+      </deliveries>
+      <exclusions>
+        <exclusion>
+          <organization><name>eMusic</name></organization>
+        </exclusion>
+      </exclusions>
+      <territory_release_dates>
+        <territory_release_date>
+          <territory_group>Europe</territory_group>
+          <release_date>2013-04-04</release_date>
+          <preorder_date>2013-03-23</preorder_date>
+        </territory_release_date>
+      </territory_release_dates>
+    </schedule>
+    <usage_rights>
+      <usage_right>
+        <rights>
+          <right>Subscription streaming</right>
+          <right>Ad supported streaming</right>
+          <right>Subscription download</right>
+          <right>Permanent download</right>
+          <right>User generated audio</right>
+          <right>User generated video</right>
+          <right>User generated ringtone</right>
+          <right>Burn CD</right>
+        </rights>
+      </usage_right>
+      <usage_right>
+        <organization>
+          <name>Clubload</name>
+        </organization>
+        <rights>
+          <right>Subscription streaming</right>
+        </rights>
+      </usage_right>
+    </usage_rights>
+  </album>
+</ingestion>

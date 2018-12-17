@@ -1,0 +1,23 @@
+<jaxb:bindings version="1.0" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:jsonix="http://jsonix.highsource.org/customizations"
+	jaxb:extensionBindingPrefixes="jsonix">
+
+	<jaxb:bindings 
+		schemaLocation="http://fugamusic.com/docs/ingestion/ingestion.xsd" 
+		node="/xs:schema">	
+		<jsonix:mapping name="ING" package="generated"/>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="http://fugamusic.com/docs/ingestion/iso3166.xsd" 
+		node="/xs:schema">	
+		<jsonix:mapping name="ING_ISO3166" package="com.fugamusic.docs.ingestion.iso3166"/>
+	</jaxb:bindings>
+
+	<jaxb:bindings 
+		schemaLocation="http://fugamusic.com/docs/ingestion/iso6391.xsd" 
+		node="/xs:schema">	
+		<jsonix:mapping name="ING_ISO6391" package="com.fugamusic.docs.ingestion.iso6391"/>
+	</jaxb:bindings>
+</jaxb:bindings>
